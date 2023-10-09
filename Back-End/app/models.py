@@ -80,6 +80,8 @@ class Hospital(Base):
     id = Column(Integer, nullable=False, index=True, primary_key=True)
     hospital_name = Column(String, nullable=False)
     # is_approved to show if an hospital's details has been approved by the admin
+    is_approved = Column(Boolean, nullable=False, default=False)
+    logo = Column(String, nullable=False)
     address = Column(String, nullable=False)
     city = Column(String, nullable=False)
     state = Column(String, nullable=False)
@@ -92,7 +94,8 @@ class Hospital(Base):
     hospital_id = Column(String, nullable=False, unique = True)
     doctors = relationship("Doctor", primaryjoin="Hospital.hospital_name == Doctor.hospital_name", back_populates="hospital")
     patients = relationship("Patient", primaryjoin="Hospital.hospital_id == Patient.hospital_id", back_populates="hospital")
-    # lga
+    
+    
     
     __table_args__ = (
         UniqueConstraint('hospital_name', name='unique_hospital_name'),
