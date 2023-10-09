@@ -123,6 +123,8 @@ class HospitalBase(BaseModel):
     role: str = "hospital"
     admin_email: EmailStr
     license_number: str
+    logo: str 
+    lga: str
     
 
 class HospitalCreate(HospitalBase):

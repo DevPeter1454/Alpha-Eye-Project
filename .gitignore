@@ -2,3 +2,4 @@ Back-End/venv/
 Back-End/app/__pycache__
 Back-End/app/routers/__pycache__
 Back-End/.env
+Back-End/alembic/__pycache__
