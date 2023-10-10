@@ -1,34 +1,10 @@
 import React from "react";
+import { BiChevronDown } from "react-icons/bi";
 import AuthContainer from "../Layouts/AuthLayout";
 import logo from "../assets/svgs/logo.svg";
+import { StatesOptions, LGAOptions } from "../utils/SelectOptions";
 
-const States = [
-  {
-    id: 1,
-    label: "Select your date",
-    value: "select your date",
-  },
-  {
-    id: 2,
-    label: "No date for now",
-    value: "no date for now",
-  },
-];
-
-const LGA = [
-  {
-    id: 1,
-    label: "Select Local government",
-    value: "select Local government",
-  },
-  {
-    id: 2,
-    label: "No local government for now",
-    value: "no local government for now",
-  },
-];
-
-function AdminLogin() {
+function AdminSignup() {
   return (
     <AuthContainer>
       <div className="w-full m-auto h-auto bg-[#fff] not-italic leading-normal rounded-lg shad">
@@ -54,7 +30,7 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Hospital name"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
 
@@ -67,7 +43,7 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter UID here"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
           </div>
@@ -84,7 +60,7 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter address"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
 
@@ -92,30 +68,39 @@ function AdminLogin() {
               <label htmlFor="" className="my-1 text-[16px] font-medium">
                 State *
               </label>
-              {/* <input */}
-              {/* <select
-                // type="text"
-                name=""
-                id=""
-                placeholder="Select your date"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
-              /> */}
+              <div className="relative text-[#98A2B3]">
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "25%",
+                    right: "15px",
+                    minWidth: "16px",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <BiChevronDown size={20} />
+                </span>
 
-              <select
-                name="region"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal text-[#98A2B3] pr-10"
-              >
-                {States.map((state, id) => (
-                  <option value={state.value} key={id} className="w-full">
-                    {state.label}
-                  </option>
-                ))}
-              </select>
+                <select
+                  name="State"
+                  className="w-full bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal pr-10 appearance-none hover:bg-[#F2F2F2] hover:border hover:border-[#D0D5DD]"
+                >
+                  {StatesOptions.map((state) => (
+                    <option
+                      value={state.value}
+                      key={state.id}
+                      className="w-full"
+                    >
+                      {state.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </form>
           </div>
           {/* Second row ends here */}
 
-          {/* third row start here */}
+          {/* Third row start here */}
           <div className="w-full flex justify-between h-auto my-3">
             <form action="" className="w-[45%] flex flex-col h-auto">
               <label htmlFor="" className="my-1 text-[16px] font-medium">
@@ -126,38 +111,42 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Hospital name"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
 
-            <form action="" className="w-[45%] flex flex-col h-auto">
+            <form action="" className="w-[45%] flex flex-col h-auto relative">
               <label htmlFor="" className="my-1 text-[16px] font-medium">
                 Local Government *
               </label>
-              {/* <input */}
-              {/* <select
-                // type="text"
-                name=""
-                id=""
-                placeholder="Select Local government"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
-              /> */}
-
-              <select
-                name="region"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal text-[#98A2B3] pr-10"
-              >
-                {LGA.map((lga, id) => (
-                  <option value={lga.value} key={id} className="w-full">
-                    {lga.label}
-                  </option>
-                ))}
-              </select>
+              <div className="relative text-[#98A2B3]">
+                <span
+                  style={{
+                    position: "absolute",
+                    top: "25%",
+                    right: "15px",
+                    minWidth: "16px",
+                    pointerEvents: "none",
+                  }}
+                >
+                  <BiChevronDown size={20} />
+                </span>
+                <select
+                  name="region"
+                  className="w-full bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal pr-10 appearance-none hover:bg-[#F2F2F2] hover:border hover:border-[#D0D5DD]"
+                >
+                  {LGAOptions.map((lga) => (
+                    <option value={lga.value} key={lga.id} className="w-full">
+                      {lga.label}
+                    </option>
+                  ))}
+                </select>
+              </div>
             </form>
           </div>
-          {/* third row ends here */}
+          {/* Third row ends here */}
 
-          {/* forth row start here */}
+          {/* Fourth row start here */}
           <div className="w-full flex justify-between h-auto my-3">
             <form action="" className="w-[45%] flex flex-col h-auto">
               <label htmlFor="" className="my-1 text-[16px] font-medium">
@@ -168,7 +157,7 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Email Address"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
 
@@ -181,13 +170,13 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Phone Number"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
           </div>
-          {/* forth row ends here */}
+          {/* Fourth row ends here */}
 
-          {/* fifth row ends here */}
+          {/* Fifth row ends here */}
           <div className="w-full flex justify-between h-auto my-3">
             <form action="" className="w-[45%] flex flex-col h-auto">
               <label htmlFor="" className="my-1 text-[16px] font-medium">
@@ -198,7 +187,7 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Password"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
 
@@ -211,13 +200,13 @@ function AdminLogin() {
                 name=""
                 id=""
                 placeholder="Enter Password Again"
-                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal"
+                className="bg-[#fff] border border-[#D0D5DD] rounded-[6px] pl-3 h-10 outline-none text-[14px] font-normal hover:border-2 hover:border-[#59B7F6] input-shadow text-[#4F4F4F]"
               />
             </form>
           </div>
-          {/* fifth row ends here */}
+          {/* Fifth row ends here */}
 
-          <div className="bg-[#0693F1] w-[30%] py-3 my-5 m-auto rounded-lg text-[#fff] text-center">
+          <div className="bg-[#0693F1] w-[30%] py-3 my-8 m-auto rounded-lg text-[#fff] text-center cursor-pointer">
             Create Account
           </div>
         </div>
@@ -226,4 +215,4 @@ function AdminLogin() {
   );
 }
 
-export default AdminLogin;
+export default AdminSignup;
