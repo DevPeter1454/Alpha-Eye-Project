@@ -14,11 +14,11 @@ class AuthRepository {
     final res = await _authApi.login(email: email, password: password);
 
     if (res.success) {
-      authLocalStorage.saveToken(res.data?.token);
+      authLocalStorage.saveToken(res.data?.accessToken);
       appLocalStorage.saveAppState(AppState.authenticated);
-      // appLocalStorage.saveUser(res.data?.user);
-      // appGlobals.user = res.data?.user;
-      appGlobals.token = res.data?.token;
+      appLocalStorage.saveUser(res.data?.user);
+      appGlobals.user = res.data?.user;
+      appGlobals.token = res.data?.accessToken;
     }
 
     return res;
@@ -47,6 +47,12 @@ class AuthRepository {
     return _authApi.resendVerification(
       email: email,
     );
+  }
+
+  Future<ApiResponse<CurrentUserResponse>> getCurrentUser({
+    required String email,
+  }) async {
+    return _authApi.getCurrentUser(email: email);
   }
 
   Future<ApiResponse> resetPassword({

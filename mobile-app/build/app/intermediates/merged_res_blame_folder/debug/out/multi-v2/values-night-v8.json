@@ -4,7 +4,7 @@
             "outputFile": "com.switchcon.alpha_eye.app-mergeDebugResources-12:/values-night-v8/values-night-v8.xml",
             "map": [
                 {
-                    "source": "/Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/res/values-night/styles.xml",
+                    "source": "/Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/res/values-night/styles.xml",
                     "from": {
                         "startLines": "3,14",
                         "startColumns": "4,4",

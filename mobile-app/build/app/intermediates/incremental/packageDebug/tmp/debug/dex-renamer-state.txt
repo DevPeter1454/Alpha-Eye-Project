@@ -1,4 +1,4 @@
-#Mon Oct 09 18:46:53 WAT 2023
-base.0=/Users/admin/Documents/flutterApps/alpha_eye/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
+#Tue Oct 10 14:24:26 WAT 2023
+base.0=/Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/app/intermediates/dex/debug/mergeDexDebug/classes.dex
 path.0=classes.dex
 renamed.0=classes.dex

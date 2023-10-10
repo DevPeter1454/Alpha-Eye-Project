@@ -151,6 +151,7 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                 },
                 borderColor: AppColors.primary,
                 borderWidth: 1,
+                width: double.infinity,
                 color: Colors.transparent,
                 child: const AppText(
                   'Recommend a nearby clinic',
