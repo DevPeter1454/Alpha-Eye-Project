@@ -1,0 +1,3 @@
+.env
+alembic/versions/__pycache__
+venv/
