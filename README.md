@@ -1,16 +1,8 @@
-# :tada: Alpha-Eye
+# React + Vite
 
-## Working with Alpha-Eye
-- Fork the repository
-- Clone the forked repository
-- create a new branch
-- create a directory e.g for FE create directory for FE to include all the codes e.t.c
-- Check through issues or create a new issue for the aspect you're working on
-- Submit a PR that solves the issue
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
+Currently, two official plugins are available:
 
-
-# :key: LICENSE
-This project is licensed with `MIT`
-
-Don't forget to star :star: this project if you like it. All support is highly appreciated :100:
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
