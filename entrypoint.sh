@@ -7,5 +7,5 @@
 alembic upgrade head
 
 # Start your FastAPI application
-# uvicorn app.main:app --host 0.0.0.0 --port 8000 
-gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app
+uvicorn app.main:app --host 0.0.0.0 --port 8000 
+# gunicorn -w 4 -k uvicorn.workers.UvicornWorker app.main:app
