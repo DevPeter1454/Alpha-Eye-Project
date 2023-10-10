@@ -34,11 +34,6 @@ class CreateAccountPage extends HookWidget {
           }
           if (state is RegisterSuccess) {
             snackBars.success(message: 'Registration Successful');
-            navigationService.pushReplacement(
-              VerifyEmailPage(
-                email: emailTEC.text.trim(),
-              ),
-            );
           }
         },
         builder: (context, state) {
@@ -212,6 +207,9 @@ class CreateAccountPage extends HookWidget {
                               navigationService.pushReplacement(
                                 VerifyEmailPage(
                                   email: emailTEC.text.trim(),
+                                  firstName: firstNameTEC.text.trim(),
+                                  lastName: lastNameTEC.text.trim(),
+                                  password: passwordTEC.text.trim(),
                                 ),
                               );
                             },

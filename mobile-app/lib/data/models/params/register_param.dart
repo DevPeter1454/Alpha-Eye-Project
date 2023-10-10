@@ -1,33 +1,55 @@
 class RegisterParam {
-  String? firstName;
-  String? lastName;
-  String? email;
-  String? password;
-  String? phoneNumber;
+  String firstname;
+  String lastname;
+  int age;
+  String gender;
+  String address;
+  String city;
+  String stateOfResidence;
+  String phone;
+  String email;
+  String role;
+  String password;
 
   RegisterParam({
-    this.firstName,
-    this.lastName,
-    this.email,
-    this.password,
-    this.phoneNumber,
+    required this.firstname,
+    required this.lastname,
+    required this.age,
+    required this.gender,
+    required this.address,
+    required this.city,
+    required this.stateOfResidence,
+    required this.phone,
+    required this.email,
+    required this.role,
+    required this.password,
   });
 
-  RegisterParam.fromJson(Map<String, dynamic> json) {
-    firstName = json['first_name'];
-    lastName = json['last_name'];
-    email = json['email'];
-    password = json['password'];
-    phoneNumber = json['phone_number'];
-  }
+  factory RegisterParam.fromJson(Map<String, dynamic> json) => RegisterParam(
+        firstname: json["firstname"],
+        lastname: json["lastname"],
+        age: json["age"],
+        gender: json["gender"],
+        address: json["address"],
+        city: json["city"],
+        stateOfResidence: json["state_of_residence"],
+        phone: json["phone"],
+        email: json["email"],
+        role: json["role"],
+        password: json["password"],
+      );
 
-  Map<String, dynamic> toJson() {
-    final Map<String, dynamic> data = <String, dynamic>{};
-    data['first_name'] = firstName;
-    data['last_name'] = lastName;
-    data['email'] = email;
-    data['password'] = password;
-    data['phone_number'] = phoneNumber;
-    return data;
-  }
+  Map<String, dynamic> toJson() => {
+        "firstname": firstname,
+        "lastname": lastname,
+        "age": age,
+        "gender": gender,
+        "address": address,
+        "city": city,
+        "state_of_residence": stateOfResidence,
+        "phone": phone,
+        "email": email,
+        "role": role,
+        "password": password,
+      };
 }

@@ -14,9 +14,16 @@ import 'login.dart';
 
 class VerifyEmailPage extends StatefulHookWidget {
   final String email;
+  final String firstName;
+  final String lastName;
+  final String password;
+
   const VerifyEmailPage({
     super.key,
     required this.email,
+    required this.firstName,
+    required this.lastName,
+    required this.password,
   });
 
   @override
@@ -151,7 +158,14 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                       //   ),
                       // );
 
-                      navigationService.pushReplacement(const MoreInfo());
+                      navigationService.pushReplacement(
+                        MoreInfo(
+                          email: widget.email,
+                          firstName: widget.firstName,
+                          lastName: widget.lastName,
+                          password: widget.password,
+                        ),
+                      );
                     },
                     title: 'Continue',
                   ),
