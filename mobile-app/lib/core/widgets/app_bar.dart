@@ -33,10 +33,10 @@ class HomeAppBar extends StatelessWidget {
               url:
                   'https://www.befunky.com/images/prismic/82e0e255-17f9-41e0-85f1-210163b0ea34_hero-blur-image-3.jpg?auto=avif,webp&format=jpg&width=896',
             ),
-            const Text.rich(
+            Text.rich(
               TextSpan(
                 children: [
-                  TextSpan(
+                  const TextSpan(
                     text: 'Good Evening ',
                     style: TextStyle(
                       color: Color(0xFF4F4F4F),
@@ -46,8 +46,8 @@ class HomeAppBar extends StatelessWidget {
                     ),
                   ),
                   TextSpan(
-                    text: 'Tiola',
-                    style: TextStyle(
+                    text: appGlobals.user?.firstname ?? '',
+                    style: const TextStyle(
                       color: AppColors.primary,
                       fontSize: 18,
                       fontWeight: FontWeight.w600,
