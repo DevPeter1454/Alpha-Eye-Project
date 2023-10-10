@@ -35,6 +35,8 @@ class UserOut(BaseModel):
     id: int
     special_id : Optional[str] = None
     email: EmailStr
+    firstname: str
+    lastname: str
     
     class Config:
         from_attributes = True
@@ -175,3 +177,8 @@ class HospitalTokenData(BaseModel):
     id: Optional[int] = None
     hospital_id: Optional[str] = None
     license_number: Optional[str] = None
+    
+class TokenUser(BaseModel):
+    access_token:str
+    token_type:str = "bearer"
+    user: UserBase

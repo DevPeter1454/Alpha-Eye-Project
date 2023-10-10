@@ -1,3 +1,4 @@
 .env
 alembic/versions/__pycache__
 venv/
+app/__pycache__

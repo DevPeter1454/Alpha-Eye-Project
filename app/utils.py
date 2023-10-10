@@ -29,3 +29,14 @@ def dict_to_patient(patient, data):
     for key, value in data.items():
         setattr(patient, key, value)
     return patient
+
+def user_to_dict(user):
+    return {
+        column.key: getattr(user, column.key)
+        for column in user.__table__.columns
+    }
+    
+def dict_to_user(user, data):
+    for key, value in data.items():
+        setattr(user, key, value)
+    return user
