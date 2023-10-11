@@ -1,20 +1,22 @@
-import React from "react";
+import React, { Fragment } from "react";
 import DashboardLayout from "../Layouts/DashboardLayout";
-import AddDoctor from "../components/AddDoctors";
+import { Tab } from "@headlessui/react";
+import Sidebar from "../components/Sidebar";
+import AddDoctors from "../components/AddDoctors";
 import ManageDoctors from "../components/ManageDoctors";
 import ViewPatients from "../components/ViewPatients";
 
-interface dashboard {
-  children?: any;
-  current: number;
-}
-
-function dashboard({ children, current }: dashboard) {
+function dashboard() {
   return (
     <DashboardLayout>
-      {current === 1 ? <AddDoctor /> : <h1>Empty</h1>}
-      {current === 2 ? <ManageDoctors /> : <h1>Empty</h1>}
-      {current === 3 ? <ViewPatients /> : <h1>Empty</h1>}
+      <Tab.Group>
+        <Sidebar />
+        <Tab.Panels className="w-[78%] flex justify-center">
+          <AddDoctors />
+          <ManageDoctors />
+          <ViewPatients />
+        </Tab.Panels>
+      </Tab.Group>
     </DashboardLayout>
   );
 }

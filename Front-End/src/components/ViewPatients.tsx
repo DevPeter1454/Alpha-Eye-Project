@@ -1,12 +1,8 @@
 import React from "react";
-import DashboardLayout from "../Layouts/DashboardLayout";
+import { Tab } from "@headlessui/react";
 
 function ViewPatients() {
-  return (
-    <DashboardLayout current={3}>
-      <div>ViewPatients</div>
-    </DashboardLayout>
-  );
+  return <Tab.Panel>View Patients</Tab.Panel>;
 }
 
 export default ViewPatients;
