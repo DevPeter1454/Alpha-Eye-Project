@@ -3,9 +3,9 @@ import { Tab } from "@headlessui/react";
 import addcircle from "../assets/svgs/add-circle.svg";
 import add from "../assets/svgs/add.svg";
 
-function AddDoctors() {
+function NewDocDefault() {
   return (
-    <Tab.Panel className="w-4/5 m-auto h-[60vh] flex flex-col">
+    <Tab.Panel className="w-3/5 m-auto h-[60vh] flex flex-col bg-[#fff] rounded-[6px] shads">
       <img src={addcircle} alt="" className="m-auto" />
       <p className="text-[#828282] text-[28px] font-semibold text-center my-4">
         Add new Doctor
@@ -23,4 +23,4 @@ function AddDoctors() {
   );
 }
 
-export default AddDoctors;
+export default NewDocDefault;
