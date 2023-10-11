@@ -1,6 +1,5 @@
 import 'package:alpha_eye/core/cores.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/svg.dart';
 
 class ClinicCard extends StatelessWidget {
   const ClinicCard({super.key});
@@ -15,8 +14,10 @@ class ClinicCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              SvgPicture.asset(
-                AppAssets.uiLogo,
+              Image.asset(
+                AppAssets.uiLogoPng,
+                height: 56,
+                width: 56,
               ),
               const Spacing.width(8),
               const Column(

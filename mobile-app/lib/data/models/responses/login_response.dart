@@ -1,23 +1,75 @@
 class LoginResponse {
-  int? code;
-  DateTime? expire;
-  String? token;
+  String? accessToken;
+  String? tokenType;
+  User? user;
 
   LoginResponse({
-    this.code,
-    this.expire,
-    this.token,
+    this.accessToken,
+    this.tokenType,
+    this.user,
   });
 
   factory LoginResponse.fromJson(Map<String, dynamic> json) => LoginResponse(
-        code: json["code"],
-        expire: json["expire"] != null ? DateTime.parse(json["expire"]) : null,
-        token: json["token"],
+        accessToken: json["access_token"],
+        tokenType: json["token_type"],
+        user: json["user"] == null ? null : User.fromJson(json["user"]),
       );
 
   Map<String, dynamic> toJson() => {
-        "code": code,
-        "expire": expire?.toIso8601String(),
-        "token": token,
+        "access_token": accessToken,
+        "token_type": tokenType,
+        "user": user?.toJson(),
+      };
+}
+
+class User {
+  String? firstname;
+  String? lastname;
+  int? age;
+  String? gender;
+  String? address;
+  String? city;
+  String? stateOfResidence;
+  String? phone;
+  String? email;
+  String? role;
+
+  User({
+    this.firstname,
+    this.lastname,
+    this.age,
+    this.gender,
+    this.address,
+    this.city,
+    this.stateOfResidence,
+    this.phone,
+    this.email,
+    this.role,
+  });
+
+  factory User.fromJson(Map<String, dynamic> json) => User(
+        firstname: json["firstname"],
+        lastname: json["lastname"],
+        age: json["age"],
+        gender: json["gender"],
+        address: json["address"],
+        city: json["city"],
+        stateOfResidence: json["state_of_residence"],
+        phone: json["phone"],
+        email: json["email"],
+        role: json["role"],
+      );
+
+  Map<String, dynamic> toJson() => {
+        "firstname": firstname,
+        "lastname": lastname,
+        "age": age,
+        "gender": gender,
+        "address": address,
+        "city": city,
+        "state_of_residence": stateOfResidence,
+        "phone": phone,
+        "email": email,
+        "role": role,
       };
 }
