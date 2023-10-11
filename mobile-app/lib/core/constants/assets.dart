@@ -4,6 +4,7 @@ class AppAssets {
   static const alphaLogoWhitePng = 'assets/images/pngs/alphaLogoWhite.png';
   static const alphaLogoBluePng = 'assets/images/pngs/alphaLogoBlue.png';
   static const banner = 'assets/images/pngs/banner.png';
+  static const uiLogoPng = 'assets/images/pngs/uiLogoPng.png';
 
   //SVGS
   static const searchIconSvg = 'assets/images/svgs/Search.svg';

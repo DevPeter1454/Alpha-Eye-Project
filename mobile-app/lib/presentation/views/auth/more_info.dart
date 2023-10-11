@@ -1,13 +1,24 @@
+import 'package:alpha_eye/presentation/views/auth/login.dart';
 import 'package:alpha_eye/presentation/views/buyer/home/bottom_nav.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../core/cores.dart';
+import '../../../data/data.dart';
 import '../../bloc/blocs.dart';
 
 class MoreInfo extends StatefulHookWidget {
-  const MoreInfo({super.key});
+  final String firstName;
+  final String lastName;
+  final String password;
+  final String email;
+  const MoreInfo(
+      {super.key,
+      required this.firstName,
+      required this.lastName,
+      required this.password,
+      required this.email});
 
   @override
   State<MoreInfo> createState() => _MoreInfoState();
@@ -21,6 +32,7 @@ class _MoreInfoState extends State<MoreInfo> {
     final addressTEC = useTextEditingController();
     final cityTEC = useTextEditingController();
     final stateTEC = useTextEditingController();
+    final phoneTEC = useTextEditingController();
     final ageTEC = useTextEditingController();
     final formKey = useState(GlobalKey<FormState>());
     final loading = useState(false);
@@ -36,7 +48,7 @@ class _MoreInfoState extends State<MoreInfo> {
           if (state is RegisterSuccess) {
             snackBars.success(message: 'Registration Successful');
             navigationService.pushReplacement(
-              const BuyerHome(),
+              const LoginPage(),
             );
           }
         },
@@ -153,14 +165,32 @@ class _MoreInfoState extends State<MoreInfo> {
                           ),
                           const Spacing.smallHeight(),
                           AppTextField(
-                            textEditingController: cityTEC,
+                            textEditingController: addressTEC,
                             validator: (val) => val!.isEmpty
                                 ? 'Please enter a valid Email\n'
                                 : null,
                             textInputType: TextInputType.emailAddress,
                             maxLines: 1,
-                            textInputAction: TextInputAction.done,
+                            textInputAction: TextInputAction.next,
                             hintText: 'Address',
+                          ),
+                          const Spacing.mediumHeight(),
+                          const AppText(
+                            'Phone Number',
+                            color: AppColors.black,
+                            fontFamily: FontFamily.hovesRegular,
+                            fontSize: 16,
+                          ),
+                          const Spacing.smallHeight(),
+                          AppTextField(
+                            textEditingController: phoneTEC,
+                            validator: (val) => val!.isEmpty
+                                ? 'Please enter a valid Email\n'
+                                : null,
+                            textInputType: TextInputType.number,
+                            maxLines: 1,
+                            textInputAction: TextInputAction.done,
+                            hintText: 'Phone Number',
                           ),
                           const Spacing.height(30),
                           AppButton(
@@ -170,19 +200,22 @@ class _MoreInfoState extends State<MoreInfo> {
                                 return;
                               }
                               loading.value = true;
-                              // authBloc.add(
-                              //   RegisterEvent(
-                              //       param: RegisterParam(
-                              //     email: emailTEC.text.trim(),
-                              //     firstName: firstNameTEC.text.trim(),
-                              //     lastName: lastNameTEC.text.trim(),
-                              //     password: passwordTEC.text.trim(),
-                              //     phoneNumber:
-                              //         '+234${phoneNumberTEC.text.trim()}',
-                              //   )),
-                              // );
-                              navigationService.pushReplacement(
-                                const BuyerHome(),
+                              authBloc.add(
+                                RegisterEvent(
+                                  param: RegisterParam(
+                                    email: widget.email,
+                                    firstname: widget.firstName,
+                                    lastname: widget.lastName,
+                                    password: widget.password,
+                                    address: addressTEC.text.trim(),
+                                    age: int.parse(ageTEC.text.trim()),
+                                    city: cityTEC.text.trim(),
+                                    gender: genderTEC.text.trim(),
+                                    phone: '',
+                                    role: 'user',
+                                    stateOfResidence: stateTEC.text.trim(),
+                                  ),
+                                ),
                               );
                             },
                             title: 'Proceed',

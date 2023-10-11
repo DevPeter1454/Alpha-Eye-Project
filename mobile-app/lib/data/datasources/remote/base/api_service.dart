@@ -51,6 +51,21 @@ class ApiService {
     }
   }
 
+  Future<dynamic> formData(String path, {Object? data}) async {
+    try {
+      final res = await _dio.post(
+        path,
+        data: data,
+        options: Options(
+          contentType: Headers.multipartFormDataContentType,
+        ),
+      );
+      return res.data;
+    } on DioError catch (e) {
+      throw ApiFailure(e.message ?? 'Something went wrong!');
+    }
+  }
+
   Future<dynamic> patch(String path, {Object? data}) async {
     try {
       final res = await _dio.patch(path, data: data);

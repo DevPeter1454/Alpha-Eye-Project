@@ -1,7 +1,10 @@
 import 'package:alpha_eye/presentation/views/buyer/recent_scan/recent_scan.dart';
+import 'package:alpha_eye/presentation/views/buyer/scan_my_eye/scan_my_eye.dart';
+import 'package:camera/camera.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:responsive_sizer/responsive_sizer.dart';
 
 import '../../../../../core/cores.dart';
@@ -15,6 +18,19 @@ class HomeView extends StatefulHookWidget {
 
 class _HomeViewState extends State<HomeView> {
   final staticPadding = const EdgeInsets.symmetric(horizontal: 16.0);
+  Future<void> _checkAndRequestCameraPermission(
+      List<CameraDescription> cameras) async {
+    final status = await Permission.camera.status;
+    if (status.isGranted) {
+      navigationService.push(ScanMyEye(camera: cameras));
+    } else if (status.isDenied ||
+        status.isRestricted ||
+        status.isPermanentlyDenied) {
+      await Permission.camera.request();
+      _checkAndRequestCameraPermission(cameras);
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     return SingleChildScrollView(
@@ -64,7 +80,10 @@ class _HomeViewState extends State<HomeView> {
                   circleColor: AppColors.scanBg,
                   title: 'Scan my Eye',
                   image: AppAssets.scan,
-                  onTap: () {},
+                  onTap: () async {
+                    final cameras = await availableCameras();
+                    await _checkAndRequestCameraPermission(cameras);
+                  },
                 ),
                 const Spacing.height(12),
                 quickAction(

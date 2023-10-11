@@ -1,6 +1,6 @@
 -- Merging decision tree log ---
 application
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:2:5-32:19
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:3:5-33:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:24:5-31:19
 MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:22:5-38:19
@@ -20,17 +20,20 @@ MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admi
 	android:appComponentFactory
 		ADDED from [androidx.core:core:1.6.0] /Users/admin/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/AndroidManifest.xml:24:18-86
 	android:name
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
 manifest
-ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-MERGED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/alpha_eye/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:sqflite] /Users/admin/Documents/flutterApps/alpha_eye/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/alpha_eye/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
-MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/alpha_eye/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:permission_handler_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-12:12
+MERGED from [:flutter_plugin_android_lifecycle] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:sqflite] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
+MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:2:1-9:12
 MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:17:1-23:12
 MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:17:1-33:12
 MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:17:1-40:12
@@ -55,95 +58,111 @@ MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/admin/.gradle/caches/
 MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/transforms-3/47ecd4e588b99ef3b772f04d5aa6c9b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
 MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/admin/.gradle/caches/transforms-3/03b9b3b952540ee8cedf6c096276d934/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:17:1-22:12
 MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/admin/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:17:1-24:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml:1:1-7:12
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml:1:1-7:12
 	package
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
 	android:versionName
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
 	android:versionCode
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-		ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:1-33:12
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:1-34:12
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
 	xmlns:android
-		ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml:1:11-69
-uses-sdk
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/alpha_eye/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/alpha_eye/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] /Users/admin/Documents/flutterApps/alpha_eye/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:sqflite] /Users/admin/Documents/flutterApps/alpha_eye/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/alpha_eye/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/alpha_eye/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/alpha_eye/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/alpha_eye/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:20:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/admin/.gradle/caches/transforms-3/06135b7231c11bbf2f81289b2091652f/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/admin/.gradle/caches/transforms-3/06135b7231c11bbf2f81289b2091652f/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/admin/.gradle/caches/transforms-3/c343050519f6d9d2e71fc29aaccef71b/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/admin/.gradle/caches/transforms-3/c343050519f6d9d2e71fc29aaccef71b/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] /Users/admin/.gradle/caches/transforms-3/417ff44624828db0f4f8ddabb23ab888/transformed/jetified-play-services-fido-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-fido:19.0.0] /Users/admin/.gradle/caches/transforms-3/417ff44624828db0f4f8ddabb23ab888/transformed/jetified-play-services-fido-19.0.0/AndroidManifest.xml:5:5-44
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/admin/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/admin/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/admin/.gradle/caches/transforms-3/800ecdb1784d926db4bf6fdc9ea374df/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/admin/.gradle/caches/transforms-3/800ecdb1784d926db4bf6fdc9ea374df/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/admin/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/admin/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/admin/.gradle/caches/transforms-3/75f94412898c7559d34d7edbbeaeb394/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.fragment:fragment:1.1.0] /Users/admin/.gradle/caches/transforms-3/75f94412898c7559d34d7edbbeaeb394/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.loader:loader:1.0.0] /Users/admin/.gradle/caches/transforms-3/ff65482bd388a984f10ca7f5c3c41d0d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.loader:loader:1.0.0] /Users/admin/.gradle/caches/transforms-3/ff65482bd388a984f10ca7f5c3c41d0d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/admin/.gradle/caches/transforms-3/83543b509ea72d197642ff197da2edd7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/admin/.gradle/caches/transforms-3/83543b509ea72d197642ff197da2edd7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.activity:activity:1.0.0] /Users/admin/.gradle/caches/transforms-3/eb85f6cd47cafc1c47da2a37336a0e33/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.activity:activity:1.0.0] /Users/admin/.gradle/caches/transforms-3/eb85f6cd47cafc1c47da2a37336a0e33/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.customview:customview:1.0.0] /Users/admin/.gradle/caches/transforms-3/1d2f11a7d5de7a531a69c65e1d8a2026/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.customview:customview:1.0.0] /Users/admin/.gradle/caches/transforms-3/1d2f11a7d5de7a531a69c65e1d8a2026/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.core:core:1.6.0] /Users/admin/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.core:core:1.6.0] /Users/admin/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/admin/.gradle/caches/transforms-3/793c4fa41fed024d54f0246b25b34906/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/admin/.gradle/caches/transforms-3/793c4fa41fed024d54f0246b25b34906/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/admin/.gradle/caches/transforms-3/61969234c20435b339c4ea8c72dc0f22/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/admin/.gradle/caches/transforms-3/61969234c20435b339c4ea8c72dc0f22/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/admin/.gradle/caches/transforms-3/7fcad9088319f1ebd7850d62df4bcaf7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/admin/.gradle/caches/transforms-3/7fcad9088319f1ebd7850d62df4bcaf7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/admin/.gradle/caches/transforms-3/c9c1416cfdc16237773b18cd0425609e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/admin/.gradle/caches/transforms-3/c9c1416cfdc16237773b18cd0425609e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/admin/.gradle/caches/transforms-3/cda2a1ca4d3bd6aae60d8d586ec4f3ff/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.tracing:tracing:1.0.0] /Users/admin/.gradle/caches/transforms-3/cda2a1ca4d3bd6aae60d8d586ec4f3ff/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/admin/.gradle/caches/transforms-3/76f856ea98086720a3c1fffee80b523a/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/admin/.gradle/caches/transforms-3/76f856ea98086720a3c1fffee80b523a/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/transforms-3/47ecd4e588b99ef3b772f04d5aa6c9b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/transforms-3/47ecd4e588b99ef3b772f04d5aa6c9b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/admin/.gradle/caches/transforms-3/03b9b3b952540ee8cedf6c096276d934/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/admin/.gradle/caches/transforms-3/03b9b3b952540ee8cedf6c096276d934/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/admin/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/admin/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
-INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
-	android:targetSdkVersion
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
-	android:minSdkVersion
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/main/AndroidManifest.xml
-		INJECTED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml
-uses-permission#android.permission.INTERNET
-ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml:6:5-66
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:1:11-69
+uses-permission#android.permission.CAMERA
+ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:2:5-65
+MERGED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
+MERGED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:9:5-65
 	android:name
-		ADDED from /Users/admin/Documents/flutterApps/alpha_eye/android/app/src/debug/AndroidManifest.xml:6:22-64
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml:2:22-62
+uses-sdk
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:shared_preferences_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/shared_preferences_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:permission_handler_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/permission_handler_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:flutter_plugin_android_lifecycle] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/flutter_plugin_android_lifecycle/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:sqflite] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/sqflite/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:path_provider_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/path_provider_android/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [:smart_auth] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/smart_auth/intermediates/merged_manifest/debug/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window-java:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/ae81e06d24c799147c26814497a2a305/transformed/jetified-window-java-1.0.0-beta04/AndroidManifest.xml:19:5-21:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:20:5-22:41
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.4.0] /Users/admin/.gradle/caches/transforms-3/9fbd8b6fada67877222f712826ad1a35/transformed/jetified-play-services-auth-20.4.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/admin/.gradle/caches/transforms-3/06135b7231c11bbf2f81289b2091652f/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/admin/.gradle/caches/transforms-3/06135b7231c11bbf2f81289b2091652f/transformed/jetified-play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/admin/.gradle/caches/transforms-3/c343050519f6d9d2e71fc29aaccef71b/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/admin/.gradle/caches/transforms-3/c343050519f6d9d2e71fc29aaccef71b/transformed/jetified-play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] /Users/admin/.gradle/caches/transforms-3/417ff44624828db0f4f8ddabb23ab888/transformed/jetified-play-services-fido-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:19.0.0] /Users/admin/.gradle/caches/transforms-3/417ff44624828db0f4f8ddabb23ab888/transformed/jetified-play-services-fido-19.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/admin/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.0.1] /Users/admin/.gradle/caches/transforms-3/aba8f806953ea3dd8f794da3aeb78a12/transformed/jetified-play-services-base-18.0.1/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/admin/.gradle/caches/transforms-3/800ecdb1784d926db4bf6fdc9ea374df/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.1] /Users/admin/.gradle/caches/transforms-3/800ecdb1784d926db4bf6fdc9ea374df/transformed/jetified-play-services-tasks-18.0.1/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/admin/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.1.0] /Users/admin/.gradle/caches/transforms-3/58aa1384bde170d075503b845cfcf44c/transformed/jetified-play-services-basement-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/admin/.gradle/caches/transforms-3/75f94412898c7559d34d7edbbeaeb394/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.1.0] /Users/admin/.gradle/caches/transforms-3/75f94412898c7559d34d7edbbeaeb394/transformed/fragment-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.loader:loader:1.0.0] /Users/admin/.gradle/caches/transforms-3/ff65482bd388a984f10ca7f5c3c41d0d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/admin/.gradle/caches/transforms-3/ff65482bd388a984f10ca7f5c3c41d0d/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/admin/.gradle/caches/transforms-3/83543b509ea72d197642ff197da2edd7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/admin/.gradle/caches/transforms-3/83543b509ea72d197642ff197da2edd7/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.0.0] /Users/admin/.gradle/caches/transforms-3/eb85f6cd47cafc1c47da2a37336a0e33/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.0.0] /Users/admin/.gradle/caches/transforms-3/eb85f6cd47cafc1c47da2a37336a0e33/transformed/jetified-activity-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.0.0] /Users/admin/.gradle/caches/transforms-3/1d2f11a7d5de7a531a69c65e1d8a2026/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.0.0] /Users/admin/.gradle/caches/transforms-3/1d2f11a7d5de7a531a69c65e1d8a2026/transformed/customview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.6.0] /Users/admin/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.6.0] /Users/admin/.gradle/caches/transforms-3/7e9df2ac2213a6bd3cef0f2f27870d79/transformed/core-1.6.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/admin/.gradle/caches/transforms-3/793c4fa41fed024d54f0246b25b34906/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.2.0] /Users/admin/.gradle/caches/transforms-3/793c4fa41fed024d54f0246b25b34906/transformed/lifecycle-runtime-2.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/admin/.gradle/caches/transforms-3/61969234c20435b339c4ea8c72dc0f22/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.savedstate:savedstate:1.0.0] /Users/admin/.gradle/caches/transforms-3/61969234c20435b339c4ea8c72dc0f22/transformed/jetified-savedstate-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/admin/.gradle/caches/transforms-3/7fcad9088319f1ebd7850d62df4bcaf7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.0.0] /Users/admin/.gradle/caches/transforms-3/7fcad9088319f1ebd7850d62df4bcaf7/transformed/lifecycle-livedata-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/admin/.gradle/caches/transforms-3/c9c1416cfdc16237773b18cd0425609e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.0.0] /Users/admin/.gradle/caches/transforms-3/c9c1416cfdc16237773b18cd0425609e/transformed/lifecycle-livedata-core-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/admin/.gradle/caches/transforms-3/cda2a1ca4d3bd6aae60d8d586ec4f3ff/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/admin/.gradle/caches/transforms-3/cda2a1ca4d3bd6aae60d8d586ec4f3ff/transformed/jetified-tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/admin/.gradle/caches/transforms-3/76f856ea98086720a3c1fffee80b523a/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.0.0] /Users/admin/.gradle/caches/transforms-3/76f856ea98086720a3c1fffee80b523a/transformed/core-runtime-2.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/transforms-3/47ecd4e588b99ef3b772f04d5aa6c9b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/admin/.gradle/caches/transforms-3/47ecd4e588b99ef3b772f04d5aa6c9b7/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/admin/.gradle/caches/transforms-3/03b9b3b952540ee8cedf6c096276d934/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.1.0] /Users/admin/.gradle/caches/transforms-3/03b9b3b952540ee8cedf6c096276d934/transformed/lifecycle-viewmodel-2.1.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/admin/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.annotation:annotation-experimental:1.1.0] /Users/admin/.gradle/caches/transforms-3/6c0c163cc77ae6c91f9f7dfcd179c29c/transformed/jetified-annotation-experimental-1.1.0/AndroidManifest.xml:20:5-22:41
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
+INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
+	android:targetSdkVersion
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/main/AndroidManifest.xml
+		INJECTED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml
+uses-permission#android.permission.INTERNET
+ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml:6:5-66
+	android:name
+		ADDED from /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/android/app/src/debug/AndroidManifest.xml:6:22-64
+uses-permission#android.permission.RECORD_AUDIO
+ADDED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:5-71
+	android:name
+		ADDED from [:camera_android] /Users/admin/Documents/flutterApps/Alpha-Eye-Project/mobile-app/build/camera_android/intermediates/merged_manifest/debug/AndroidManifest.xml:10:22-68
 uses-library#androidx.window.extensions
 ADDED from [androidx.window:window:1.0.0-beta04] /Users/admin/.gradle/caches/transforms-3/25cee5f028ac2a6b79fd6278ff5b59e2/transformed/jetified-window-1.0.0-beta04/AndroidManifest.xml:25:9-27:40
 	android:required

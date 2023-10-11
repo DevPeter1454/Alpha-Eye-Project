@@ -20,7 +20,10 @@ class _ClinicRecommendationViewState extends State<ClinicRecommendationView> {
       body: Padding(
         padding: EdgeInsets.symmetric(horizontal: 16.0),
         child: Column(
-          children: [Spacing.height(26.0), ClinicCard()],
+          children: [
+            Spacing.height(26.0),
+            ClinicCard(),
+          ],
         ),
       ),
     );

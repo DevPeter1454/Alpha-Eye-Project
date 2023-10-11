@@ -22,9 +22,5 @@
     {
         "merged": "com.switchcon.alpha_eye.app-merged_res-14:/mipmap-hdpi_ic_launcher.png.flat",
         "source": "com.switchcon.alpha_eye.app-main-8:/mipmap-hdpi/ic_launcher.png"
-    },
-    {
-        "merged": "com.switchcon.alpha_eye.app-merged_res-14:/drawable_launch_background.xml.flat",
-        "source": "com.switchcon.alpha_eye.app-main-8:/drawable/launch_background.xml"
     }
 ]
