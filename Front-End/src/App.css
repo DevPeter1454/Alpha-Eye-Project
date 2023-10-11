@@ -8,3 +8,7 @@
 .shad {
   box-shadow: 0px 50px 72px 50px rgba(16, 25, 40, 0.1);
 }
+
+.input-shadow {
+  box-shadow: 0px 40px 72px -12px rgba(16, 25, 40, 0.1);
+}
