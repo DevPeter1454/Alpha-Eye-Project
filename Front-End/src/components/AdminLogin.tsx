@@ -5,7 +5,7 @@ import logo from "../assets/svgs/logo.svg";
 function AdminLogin() {
   return (
     <AuthLayout>
-      <div className="w-4/5 m-auto bg-[#fff] shad rounded-[16px] not-italic leading-normal pb-5">
+      <div className="w-3/5 m-auto bg-[#fff] shad rounded-[16px] not-italic leading-normal pb-5">
         <div className="pt-2 mt-10 pl-3">
           <img src={logo} alt="laploy" className="my-5" />
         </div>

@@ -29,3 +29,21 @@ export const LGAOptions: SelectOptions[] = [
     value: "no local government for now",
   },
 ];
+
+export const GenderOptions: SelectOptions[] = [
+  {
+    id: 1,
+    label: "Select Your Gender",
+    value: "select your gender",
+  },
+  {
+    id: 2,
+    label: "Male",
+    value: "male",
+  },
+  {
+    id: 2,
+    label: "Female",
+    value: "female",
+  },
+];
