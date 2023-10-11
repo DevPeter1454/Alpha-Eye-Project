@@ -3,3 +3,5 @@ Back-End/app/__pycache__
 Back-End/app/routers/__pycache__
 Back-End/.env
 Back-End/alembic/__pycache__
+node_modules/
+mobile-app/build/
