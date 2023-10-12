@@ -25,7 +25,6 @@ class User(Base):
     special_id = Column(String, nullable=True, )
     patients = relationship("Patient", back_populates="user")
     
-    
      # Add a unique constraint to the special_id column
     __table_args__ = (
         UniqueConstraint('special_id', name='unique_special_id'),
@@ -100,3 +99,37 @@ class Hospital(Base):
     __table_args__ = (
         UniqueConstraint('hospital_name', name='unique_hospital_name'),
     )
+
+
+class Scan(Base):
+    __tablename__ = "scans"
+    label_name = Column(String, nullable=False)
+    label_id = Column(String, nullable=False, index=True, primary_key=True)
+    label_confidence = Column(Integer, nullable=False)
+    detected_conditions = Column(String, nullable=False)
+    severity = Column(String, nullable=False)
+    # detailed_description = Column(String, nullable=False)
+    title = Column(String, nullable=False)
+    description = Column(String, nullable=False)
+    recommendation = Column(String, nullable=False)
+    special_id = Column(String, ForeignKey("users.special_id"), nullable=False)
+    created_at = Column(TIMESTAMP, server_default=text('NOW()'))
+    updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))
+    
+    
+# class ScanHistory(Base):
+#     __tablename__ = "scan_history"
+#     id = Column(Integer, nullable=False, index=True, primary_key=True)
+#     label_name = Column(String, nullable=False)
+#     label_id = Column(String, nullable=False)
+#     label_confidence = Column(Integer, nullable=False)
+#     detected_conditions = Column(String, nullable=False)
+#     severity = Column(String, nullable=False)
+#     detailed_description = Column(String, nullable=False)
+#     title = Column(String, nullable=False)
+#     description = Column(String, nullable=False)
+#     recommendation = Column(String, nullable=False)
+#     special_id = Column(String, ForeignKey("users.special_id"), nullable=False)
+#     created_at = Column(TIMESTAMP, server_default=text('NOW()'))
+#     updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))
+    

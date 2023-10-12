@@ -1,5 +1,5 @@
 from fastapi import FastAPI
-from .routers import doctors, auth, patients, users, hospitals
+from .routers import doctors, auth, patients, users, hospitals, scans
 from .database import engine
 from . import models
 from fastapi.middleware.cors import CORSMiddleware
@@ -24,6 +24,7 @@ app.include_router(users.router)
 app.include_router(auth.router)
 app.include_router(hospitals.router)
 app.include_router(patients.router)
+app.include_router(scans.router)
 
 @app.get("/")
 def root():

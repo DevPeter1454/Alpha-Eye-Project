@@ -2,3 +2,4 @@
 alembic/versions/__pycache__
 venv/
 app/__pycache__
+app/routers/__pycache__
