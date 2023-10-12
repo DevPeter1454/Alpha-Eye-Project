@@ -5,6 +5,7 @@ import requests
 from ..database import get_db
 from sqlalchemy.orm import Session
 from .. import schemas, models, utils, oauth2
+from ..config import settings
 
 router = APIRouter(
     prefix= "/scan",
@@ -12,10 +13,9 @@ router = APIRouter(
 )
 
 cloudinary.config(
-    cloud_name = "peterojo",
-    api_key="329888361854121",
-    api_secret="MS8z__QaqfZ9CqVA5HiNwTkO3xU"
-    
+    cloud_name = f"{settings.cloud_name}",
+    api_key=f"{settings.api_key}",
+    api_secret=f"{settings.api_secret}"
 )
 
 
