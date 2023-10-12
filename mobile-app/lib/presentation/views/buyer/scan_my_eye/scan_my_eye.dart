@@ -173,6 +173,8 @@ class _ScanMyEyeState extends State<ScanMyEye> {
                                       Colors.black.withOpacity(0.9),
                                   delay: const Duration(seconds: 1),
                                   duration: const Duration(seconds: 2),
+                                  scanningLinePadding:
+                                      const EdgeInsets.all(0.0),
                                   child: Image.file(
                                     File(pic.value!.path),
                                     fit: BoxFit.cover,

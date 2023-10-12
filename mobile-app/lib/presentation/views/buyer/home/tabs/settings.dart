@@ -206,6 +206,7 @@ class _SettingsViewState extends State<SettingsView> {
                   navigationService.pushReplacement(const LoginPage());
                 },
                 child: const AppRectangle(
+                  width: double.infinity,
                   padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 16),
                   color: AppColors.white,
                   radius: 4,
