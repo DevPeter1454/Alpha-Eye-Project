@@ -104,10 +104,12 @@ class Hospital(Base):
 class Scan(Base):
     __tablename__ = "scans"
     label_name = Column(String, nullable=False)
-    label_id = Column(String, nullable=False, index=True, primary_key=True)
+    label_id = Column(String, nullable=False)
+    scan_id = Column(String, nullable=False, index=True, primary_key=True)
     label_confidence = Column(Integer, nullable=False)
     detected_conditions = Column(String, nullable=False)
     severity = Column(String, nullable=False)
+    health_status = Column(String, nullable =False)
     # detailed_description = Column(String, nullable=False)
     title = Column(String, nullable=False)
     description = Column(String, nullable=False)

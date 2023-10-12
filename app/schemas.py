@@ -182,3 +182,19 @@ class TokenUser(BaseModel):
     access_token:str
     token_type:str = "bearer"
     user: UserBase
+    
+# class Scan(BaseModel):
+#     special_id: str
+#     label_name: str
+#     label_id: str
+#     label_confidence: float
+#     detected_conditions: str
+#     severity: str
+#     title: str
+#     description: str
+#     recommendation: str
+#     created_at: datetime
+#     updated_at: datetime
+    
+#     class Config:
+#         from_attributes = True

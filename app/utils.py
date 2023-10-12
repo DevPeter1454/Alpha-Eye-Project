@@ -40,3 +40,8 @@ def dict_to_user(user, data):
     for key, value in data.items():
         setattr(user, key, value)
     return user
+
+def generate_scan_id():
+    random_value = str(randint(0, 999999)).zfill(6)
+    scan_id = f"Scan {random_value}"
+    return scan_id
