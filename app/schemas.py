@@ -183,6 +183,7 @@ class TokenUser(BaseModel):
     token_type:str = "bearer"
     user: UserBase
     
+    
 # class Scan(BaseModel):
 #     special_id: str
 #     label_name: str

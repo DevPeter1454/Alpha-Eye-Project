@@ -42,6 +42,9 @@ def login_hospital(hospital_credentials:OAuth2PasswordRequestForm = Depends(), d
     hospital = db.query(models.Hospital).filter(models.Hospital.admin_email == hospital_credentials.username).first()
     if hospital is None:
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Invalid Credentials")
+    
+    
+    
     if not utils.verify(hospital_credentials.password, hospital.password):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Incorrect Password")
     access_token = oauth2.create_access_token(data={"id":hospital.id, "role":"hospital"})

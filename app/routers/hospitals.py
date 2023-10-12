@@ -59,3 +59,9 @@ def get_hospitals_by_city(city:str, db: Session = Depends(get_db)):
     print('here')
     hospitals = db.query(models.Hospital).filter(func.lower(models.Hospital.city) == city.lower()).all()
     return hospitals
+
+@router.get("/state/{state}", status_code= status.HTTP_200_OK, response_model=List[schemas.PublicHospital])
+def get_hospitals_by_state(state:str, db: Session = Depends(get_db)):
+    print('here')
+    hospitals = db.query(models.Hospital).filter(func.lower(models.Hospital.state) == state.lower()).all()
+    return hospitals

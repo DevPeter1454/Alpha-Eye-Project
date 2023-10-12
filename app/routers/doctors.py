@@ -27,6 +27,9 @@ def create_doctor(doctor:schemas.DoctorCreate, db:Session = Depends(get_db), cur
     if hospital is None or hospital.hospital_name != doctor.hospital_name:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Hospital not found")
     
+    if not hospital.is_approved:
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Hospital not yet approved")
+    
     old_doctor = db.query(models.Doctor).filter(models.Doctor.email == doctor.email).first()
     if old_doctor is not None:
         raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail="Email already registered")

@@ -2,5 +2,5 @@
 alembic/versions/__pycache__
 alembic/__pycache__
 venv/
-app/__pycache__
-app/routers/__pycache__
+app/__pycache__/
+app/routers/__pycache__/
