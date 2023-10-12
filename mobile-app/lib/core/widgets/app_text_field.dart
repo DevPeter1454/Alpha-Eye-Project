@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../constants/constants.dart';
 
@@ -130,12 +131,12 @@ class AppTextField extends StatelessWidget {
         textCapitalization: textCapitalization ?? TextCapitalization.none,
         validator: validator,
         textAlign: textAlign ?? TextAlign.start,
-        style: TextStyle(
-            fontSize: fontSize ?? 16,
-            height: textHeight,
-            color: textColor,
-            fontFamily: FontFamily.hovesMedium,
-            fontWeight: fontWeight),
+        style: GoogleFonts.roboto(
+            textStyle: TextStyle(
+                fontSize: fontSize ?? 16,
+                height: textHeight,
+                color: textColor,
+                fontWeight: fontWeight)),
         initialValue: initialText == null ? null : initialText!,
         onEditingComplete: onEditingComplete,
         onChanged: onChanged,
@@ -154,69 +155,69 @@ class AppTextField extends StatelessWidget {
         enabled: enabled ?? true,
         inputFormatters: inputFormatters,
         decoration: InputDecoration(
-          suffixStyle: suffixStyle ??
-              const TextStyle(
-                color: AppColors.sdn900,
-                fontSize: 16,
-              ),
-          counter: counter,
-          alignLabelWithHint: true,
-          labelText: labelText,
-          labelStyle: labelTextStyle,
-          prefixIcon: prefixIcon,
-          errorStyle: errorStyle,
-          errorText: errorText,
-          isDense: isDense ?? true,
-          contentPadding: padding ??
-              const EdgeInsets.symmetric(
-                horizontal: 16,
-                vertical: 20,
-              ),
-          suffixText: suffixText,
-          suffixIconConstraints: suffixBoxConstraints,
-          suffixIcon: suffixIcon == null ? null : suffixIcon!,
-          icon: icon == null
-              ? null
-              : Container(margin: const EdgeInsets.only(left: 16), child: icon),
-          constraints: constraints,
-          focusedBorder: focusedBorder ??
-              OutlineInputBorder(
-                borderRadius: BorderRadius.circular(borderRadius ?? 8),
-                borderSide: BorderSide(
-                    color: focusBorderColor ?? AppColors.primary,
-                    width: focusBorderWidth ?? 1),
-              ),
-          disabledBorder: disabledBorder,
-          enabledBorder: enabledBorder ??
-              OutlineInputBorder(
-                borderRadius: BorderRadius.circular(borderRadius ?? 8),
-                borderSide: BorderSide(
-                    color: borderColor ?? AppColors.borderColor,
-                    width: borderWidth ?? 1),
-              ),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(borderRadius ?? 8),
-            borderSide: BorderSide(
-                color: borderColor ?? AppColors.borderColor,
-                width: borderWidth ?? 1),
-          ),
-          errorBorder: errorBorder ??
-              OutlineInputBorder(
-                borderRadius: BorderRadius.circular(borderRadius ?? 8),
-                borderSide: BorderSide(
-                    color: errorBorderColor ?? Colors.red,
-                    width: borderWidth ?? 1),
-              ),
-          filled: true,
-          fillColor: backgroundColor ?? Colors.white,
-          hintText: hintText,
-          hintMaxLines: hintMaxLines,
-          hintStyle: TextStyle(
-              color: AppColors.grey,
-              fontSize: fontSize,
-              fontFamily: FontFamily.hovesRegular,
-              fontWeight: fontWeight),
-        ),
+            suffixStyle: suffixStyle ??
+                const TextStyle(
+                  color: AppColors.sdn900,
+                  fontSize: 16,
+                ),
+            counter: counter,
+            alignLabelWithHint: true,
+            labelText: labelText,
+            labelStyle: labelTextStyle,
+            prefixIcon: prefixIcon,
+            errorStyle: errorStyle,
+            errorText: errorText,
+            isDense: isDense ?? true,
+            contentPadding: padding ??
+                const EdgeInsets.symmetric(
+                  horizontal: 16,
+                  vertical: 20,
+                ),
+            suffixText: suffixText,
+            suffixIconConstraints: suffixBoxConstraints,
+            suffixIcon: suffixIcon == null ? null : suffixIcon!,
+            icon: icon == null
+                ? null
+                : Container(
+                    margin: const EdgeInsets.only(left: 16), child: icon),
+            constraints: constraints,
+            focusedBorder: focusedBorder ??
+                OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(borderRadius ?? 8),
+                  borderSide: BorderSide(
+                      color: focusBorderColor ?? AppColors.primary,
+                      width: focusBorderWidth ?? 1),
+                ),
+            disabledBorder: disabledBorder,
+            enabledBorder: enabledBorder ??
+                OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(borderRadius ?? 8),
+                  borderSide: BorderSide(
+                      color: borderColor ?? AppColors.borderColor,
+                      width: borderWidth ?? 1),
+                ),
+            border: OutlineInputBorder(
+              borderRadius: BorderRadius.circular(borderRadius ?? 8),
+              borderSide: BorderSide(
+                  color: borderColor ?? AppColors.borderColor,
+                  width: borderWidth ?? 1),
+            ),
+            errorBorder: errorBorder ??
+                OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(borderRadius ?? 8),
+                  borderSide: BorderSide(
+                      color: errorBorderColor ?? Colors.red,
+                      width: borderWidth ?? 1),
+                ),
+            filled: true,
+            fillColor: backgroundColor ?? Colors.white,
+            hintText: hintText,
+            hintMaxLines: hintMaxLines,
+            hintStyle: GoogleFonts.roboto(
+                textStyle: TextStyle(
+                    color: AppColors.grey,
+                    fontSize: fontSize,
+                    fontWeight: fontWeight))),
       ),
     );
   }

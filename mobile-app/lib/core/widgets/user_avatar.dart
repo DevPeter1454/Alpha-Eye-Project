@@ -3,17 +3,21 @@ import 'package:flutter/material.dart';
 
 class UserAvatar extends StatelessWidget {
   final String? url;
+  final double? height;
+  final double? width;
   const UserAvatar({
     Key? key,
     this.url,
+    this.height,
+    this.width,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Container(
         margin: const EdgeInsets.fromLTRB(24, 8, 8, 8),
-        height: 45,
-        width: 45,
+        height: height ?? 45,
+        width: width ?? 45,
         decoration: const BoxDecoration(
           shape: BoxShape.circle,
           // image: DecorationImage(

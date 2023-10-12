@@ -50,5 +50,7 @@
 	<string>This app needs access to camera when used</string>
 	<key>NSMicrophoneUsageDescription</key>
 	<string>This app needs access to microphone when used</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+  	<string>Upload images for screen background</string>
 </dict>
 </plist>

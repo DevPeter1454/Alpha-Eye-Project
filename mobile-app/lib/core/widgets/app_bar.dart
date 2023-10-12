@@ -1,3 +1,4 @@
+import 'package:alpha_eye/presentation/views/buyer/notification_page/notification_page.dart';
 import 'package:flutter/material.dart';
 import 'package:alpha_eye/core/widgets/user_avatar.dart';
 import 'package:flutter_svg/svg.dart';
@@ -58,25 +59,30 @@ class HomeAppBar extends StatelessWidget {
               ),
             ),
             const Spacer(),
-            Container(
-              padding: const EdgeInsets.all(12),
-              clipBehavior: Clip.antiAlias,
-              decoration: ShapeDecoration(
-                color: Colors.white,
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(100),
+            GestureDetector(
+              onTap: () {
+                navigationService.push(const NotificationPage());
+              },
+              child: Container(
+                padding: const EdgeInsets.all(12),
+                clipBehavior: Clip.antiAlias,
+                decoration: ShapeDecoration(
+                  color: Colors.white,
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(100),
+                  ),
+                  shadows: const [
+                    BoxShadow(
+                      color: Color(0x11101928),
+                      blurRadius: 18,
+                      offset: Offset(0, 10),
+                      spreadRadius: -2,
+                    )
+                  ],
                 ),
-                shadows: const [
-                  BoxShadow(
-                    color: Color(0x11101928),
-                    blurRadius: 18,
-                    offset: Offset(0, 10),
-                    spreadRadius: -2,
-                  )
-                ],
-              ),
-              child: Center(
-                child: SvgPicture.asset(AppAssets.notification),
+                child: Center(
+                  child: SvgPicture.asset(AppAssets.notification),
+                ),
               ),
             ),
             const Spacing.width(16.0),

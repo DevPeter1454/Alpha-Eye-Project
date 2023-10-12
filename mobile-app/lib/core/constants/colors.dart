@@ -29,6 +29,7 @@ class AppColors {
   static const uploadGreen = Color(0xFFF2FFF8);
   static const historyBg = Color(0xFFFFF4FF);
   static const lightBlue = Color(0xFFCDE9FC);
+  static const lightGrey = Color(0xFF929292);
 
   static const sdn900 = Color(0xFF0D172A);
   static const sdn800 = Color(0xFF1C293B);

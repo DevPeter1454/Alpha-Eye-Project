@@ -11,7 +11,7 @@ Future<void> setupLocator() async {
   locator.registerLazySingleton(() => AuthRepository());
   //BLOCS
   locator.registerFactory(() => AuthBloc());
-  locator.registerFactory(() => TransactionBloc());
+  locator.registerFactory(() => ScanBloc());
 
   //SERVICES
   locator.registerLazySingleton(() => SnackbarService());
@@ -37,7 +37,7 @@ BottomSheetService bottomSheetService = locator.get<BottomSheetService>();
 
 //BLOCS
 AuthBloc authBloc = locator.get<AuthBloc>();
-TransactionBloc transactionBloc = locator.get<TransactionBloc>();
+ScanBloc scanBloc = locator.get<ScanBloc>();
 
 //STORAGES
 AuthLocalStorage authLocalStorage = locator.get<AuthLocalStorage>();

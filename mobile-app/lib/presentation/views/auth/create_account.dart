@@ -53,7 +53,6 @@ class CreateAccountPage extends HookWidget {
                         'Welcome!',
                         fontSize: 24,
                         color: AppColors.sdn900,
-                        fontFamily: FontFamily.hovesBold,
                       ),
                     ),
                     //const Spacing.height(35),
@@ -75,7 +74,6 @@ class CreateAccountPage extends HookWidget {
                           const AppText(
                             'First Name',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -92,7 +90,6 @@ class CreateAccountPage extends HookWidget {
                           const AppText(
                             'Last Name',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -109,7 +106,6 @@ class CreateAccountPage extends HookWidget {
                           const AppText(
                             'Email Address',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -127,7 +123,6 @@ class CreateAccountPage extends HookWidget {
                           const AppText(
                             'Password',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -158,7 +153,6 @@ class CreateAccountPage extends HookWidget {
                           const AppText(
                             'Confirm Password',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -226,14 +220,14 @@ class CreateAccountPage extends HookWidget {
                                 // fontFamily: FontFamily.hovesRegular,
                               ),
                               TextButton(
-                                  onPressed: () =>
-                                      navigationService.push(const LoginPage()),
-                                  child: const AppText(
-                                    'Login here',
-                                    color: AppColors.primary,
-                                    fontSize: 16,
-                                    fontFamily: FontFamily.hovesSemiBold,
-                                  )),
+                                onPressed: () =>
+                                    navigationService.push(const LoginPage()),
+                                child: const AppText(
+                                  'Login here',
+                                  color: AppColors.primary,
+                                  fontSize: 16,
+                                ),
+                              ),
                             ],
                           ),
                           const Spacing.largeHeight(),

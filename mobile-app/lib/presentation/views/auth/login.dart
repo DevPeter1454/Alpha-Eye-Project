@@ -52,7 +52,6 @@ class LoginPage extends HookWidget {
                         'Hello!',
                         fontSize: 28,
                         color: AppColors.sdn900,
-                        fontFamily: FontFamily.hovesBold,
                       ),
                     ),
                     const Spacing.tinyHeight(),
@@ -114,7 +113,6 @@ class LoginPage extends HookWidget {
                                 'Forgot Password?',
                                 color: AppColors.primary,
                                 fontSize: 16,
-                                fontFamily: FontFamily.hovesSemiBold,
                               )),
                           const Spacing.height(28),
                           AppButton(
@@ -146,14 +144,14 @@ class LoginPage extends HookWidget {
                                 // fontFamily: FontFamily.hovesRegular,
                               ),
                               TextButton(
-                                  onPressed: () => navigationService
-                                      .push(const CreateAccountPage()),
-                                  child: const AppText(
-                                    'Signup here',
-                                    color: AppColors.primary,
-                                    fontSize: 16,
-                                    fontFamily: FontFamily.hovesSemiBold,
-                                  )),
+                                onPressed: () => navigationService
+                                    .push(const CreateAccountPage()),
+                                child: const AppText(
+                                  'Signup here',
+                                  color: AppColors.primary,
+                                  fontSize: 16,
+                                ),
+                              ),
                             ],
                           ),
                         ],

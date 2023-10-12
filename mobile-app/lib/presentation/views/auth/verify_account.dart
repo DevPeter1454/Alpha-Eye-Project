@@ -83,7 +83,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                     'Verify Account',
                     fontSize: 24,
                     color: AppColors.sdn900,
-                    fontFamily: FontFamily.hovesBold,
+                    fontWeight: FontWeight.w700,
                   ),
                   const Spacing.tinyHeight(),
                   RichText(
@@ -95,7 +95,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                             text: widget.email,
                             style: const TextStyle(
                               color: AppColors.sdn900,
-                              fontFamily: FontFamily.hovesSemiBold,
+                              fontWeight: FontWeight.w600,
                               fontSize: 16,
                             ),
                           ),
@@ -103,7 +103,7 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                         style: const TextStyle(
                           fontSize: 16,
                           color: AppColors.sdn600,
-                          fontFamily: FontFamily.hovesRegular,
+                          fontWeight: FontWeight.w400,
                         )),
                     textAlign: TextAlign.center,
                   ),
@@ -130,8 +130,9 @@ class _VerifyEmailPageState extends State<VerifyEmailPage> {
                         height: 48,
                         width: 48,
                         textStyle: const TextStyle(
-                            color: AppColors.sdn900,
-                            fontFamily: FontFamily.hovesBold),
+                          color: AppColors.sdn900,
+                          fontWeight: FontWeight.w700,
+                        ),
                         decoration: BoxDecoration(
                           borderRadius: BorderRadius.circular(8),
                           color: AppColors.appGrey,

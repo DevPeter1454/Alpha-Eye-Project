@@ -39,7 +39,6 @@ class SocialLoginButton extends StatelessWidget {
               text,
               color: AppColors.black,
               fontSize: 16,
-              fontFamily: FontFamily.hovesSemiBold,
             ),
           ],
         ),
