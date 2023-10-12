@@ -181,7 +181,74 @@ def get_user_scan_history(current_user = Depends(oauth2.get_current_user), db:Se
     
     scans = db.query(models.Scan).filter(models.Scan.special_id == user.special_id).all()
     
+    all_scans = []
+    
+    for scan in scans:
+        all_scans.append(
+           {
+                "special_id": user.special_id,
+                # "message": "Scan is normal",
+                "health_status": scan.health_status,
+                "label_name": scan.label_name,
+                "label_id": scan.label_id,
+                "scan_id": scan.scan_id,
+                "label_confidence": scan.label_confidence,
+                "detected_conditions": scan.detected_conditions,
+                "severity": scan.severity,
+                "title": scan.title,
+                "description": scan.description,
+                "recommendation": scan.recommendation,
+                "created_at": scan.created_at,
+                "updated_at": scan.updated_at,
+                "detailed_description": {
+                    "title": scan.title,
+                    "description": scan.description,
+                    "recommendation": scan.recommendation
+                } 
+            }
+            
+        )
+        
+    
     return {
-        "scans": scans
+        "scans": all_scans
     }
         
+
+@router.get("/history/{scan_id}", status_code=status.HTTP_200_OK)
+def get_scan_by_scan_id(scan_id:str, current_user =Depends(oauth2.get_current_user), db:Session = Depends(get_db)):
+    
+    if current_user.role == "doctor" or current_user.role == "hospital":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+    
+    user = db.query(models.User).filter(models.User.id == current_user.id).first()
+    
+    if user is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="User not found")
+    
+    scan = db.query(models.Scan).filter(models.Scan.scan_id == scan_id).first()
+    
+    if scan is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Scan not found")
+    
+    return {
+        "special_id": user.special_id,
+        # "message": "Scan is normal",
+        "health_status": scan.health_status,
+        "label_name": scan.label_name,
+        "label_id": scan.label_id,
+        "scan_id": scan.scan_id,
+        "label_confidence": scan.label_confidence,
+        "detected_conditions": scan.detected_conditions,
+        "severity": scan.severity,
+        "title": scan.title,
+        "description": scan.description,
+        "recommendation": scan.recommendation,
+        "created_at": scan.created_at,
+        "updated_at": scan.updated_at,
+        "detailed_description": {
+            "title": scan.title,
+            "description": scan.description,
+            "recommendation": scan.recommendation
+        } 
+    }
