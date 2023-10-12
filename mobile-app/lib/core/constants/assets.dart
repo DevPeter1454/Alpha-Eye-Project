@@ -17,4 +17,6 @@ class AppAssets {
   static const scan = 'assets/images/svgs/scan.svg';
   static const upload = 'assets/images/svgs/upload.svg';
   static const uiLogo = 'assets/images/svgs/uilogo.svg';
+  static const greyNotification = 'assets/images/svgs/grey_notification.svg';
+  static const uploadSVG = 'assets/images/svgs/et_upload.svg';
 }

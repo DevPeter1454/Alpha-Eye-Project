@@ -68,7 +68,7 @@ class _MoreInfoState extends State<MoreInfo> {
                         'Tell us a bit about you!',
                         fontSize: 24,
                         color: AppColors.sdn900,
-                        fontFamily: FontFamily.hovesBold,
+                        fontWeight: FontWeight.w500,
                       ),
                     ),
                     //const Spacing.height(35),
@@ -90,7 +90,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'Gender',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -107,7 +107,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'Age',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -125,7 +125,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'State of residence',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -142,7 +142,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'City',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -160,7 +160,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'Address',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -178,7 +178,7 @@ class _MoreInfoState extends State<MoreInfo> {
                           const AppText(
                             'Phone Number',
                             color: AppColors.black,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w500,
                             fontSize: 16,
                           ),
                           const Spacing.smallHeight(),
@@ -211,7 +211,7 @@ class _MoreInfoState extends State<MoreInfo> {
                                     age: int.parse(ageTEC.text.trim()),
                                     city: cityTEC.text.trim(),
                                     gender: genderTEC.text.trim(),
-                                    phone: '',
+                                    phone: phoneTEC.text.trim(),
                                     role: 'user',
                                     stateOfResidence: stateTEC.text.trim(),
                                   ),

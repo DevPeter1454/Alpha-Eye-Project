@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../cores.dart';
 
@@ -13,8 +14,9 @@ class AppTheme {
 
   static _themeData(ColorScheme colorScheme) => ThemeData(
         colorScheme: colorScheme,
-        textTheme: _textTheme(colorScheme),
-        fontFamily: FontFamily.hovesBold,
+        textTheme: GoogleFonts.robotoTextTheme(
+          _textTheme(colorScheme),
+        ),
         elevatedButtonTheme: ElevatedButtonThemeData(
           style: ElevatedButton.styleFrom(
             minimumSize: const Size.fromHeight(48),
@@ -37,26 +39,25 @@ class AppTheme {
   static TextTheme _textTheme(ColorScheme colorScheme) => TextTheme(
         headline4: TextStyle(
           fontSize: 26,
-          fontFamily: FontFamily.hovesBold,
+          fontWeight: FontWeight.bold,
           color: colorScheme.onBackground,
         ),
         headline6: TextStyle(
           fontSize: 20,
-          fontFamily: FontFamily.hovesBold,
+          fontWeight: FontWeight.bold,
           color: colorScheme.onBackground,
         ),
         bodyText1: TextStyle(
           fontSize: 16,
-          fontFamily: FontFamily.hovesRegular,
+          fontWeight: FontWeight.normal,
           color: colorScheme.onBackground,
         ),
         bodyText2: TextStyle(
           color: colorScheme.onSurface,
-          fontFamily: FontFamily.hovesRegular,
         ),
         button: TextStyle(
           fontSize: 14,
-          fontFamily: FontFamily.hovesBold,
+          fontWeight: FontWeight.bold,
           color: colorScheme.onPrimary,
         ),
       );

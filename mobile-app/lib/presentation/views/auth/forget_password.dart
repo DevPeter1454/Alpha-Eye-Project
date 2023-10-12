@@ -45,7 +45,6 @@ class ForgetPasswordPage extends HookWidget {
                         'Forgot Password',
                         fontSize: 24,
                         color: AppColors.sdn900,
-                        fontFamily: FontFamily.hovesBold,
                       ),
                       const Spacing.tinyHeight(),
                       const AppText(
