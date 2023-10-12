@@ -3,7 +3,7 @@ from .routers import doctors, auth, patients, users, hospitals, scans
 from .database import engine
 from . import models
 from fastapi.middleware.cors import CORSMiddleware
-models.Base.metadata.create_all(bind=engine)
+# models.Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
