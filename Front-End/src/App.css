@@ -20,3 +20,29 @@
 .svg-icon {
   fill: currentColor !important; /* This sets the SVG fill color to the current text color */
 }
+
+.overshad {
+  box-shadow: 0px 8px 8px -4px rgba(16, 25, 40, 0.03),
+    0px 24px 32px -4px rgba(16, 25, 40, 0.08);
+}
+
+/* .overlay {
+  background-color: rgba(0, 0, 0, 0.5);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+} */
+
+/* .john {
+  position: absolute;
+  background-color: red;
+  opacity: 0.8;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1000;
+} */
