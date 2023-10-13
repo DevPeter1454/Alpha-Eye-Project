@@ -1,8 +1,8 @@
+import 'package:alpha_eye/presentation/views/auth/onboarding_page.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:alpha_eye/core/cores.dart';
 import 'package:alpha_eye/presentation/views/auth/login.dart';
-
 
 class IntroScreen extends StatefulHookWidget {
   const IntroScreen({super.key});
@@ -21,7 +21,7 @@ class _IntroScreenState extends State<IntroScreen> {
       // } else {
       //   navigationService.pushReplacement(const LoginPage());
       // }
-      navigationService.pushReplacement(const LoginPage());
+      navigationService.pushReplacement(const OnboardingPage());
     });
     super.initState();
   }
