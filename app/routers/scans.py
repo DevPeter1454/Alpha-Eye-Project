@@ -254,3 +254,30 @@ def get_scan_by_scan_id(scan_id:str, current_user =Depends(oauth2.get_current_us
             "recommendation": scan.recommendation
         } 
     }
+    
+
+
+@router.post("/doctor/upload",status_code=status.HTTP_201_CREATED)
+async def upload_scan_by_doctor(file: UploadFile, current_user = Depends(oauth2.get_current_user), db:Session = Depends(get_db)):
+    if current_user.role == "patient" or current_user.role == "user":
+        raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+    
+    response = cloudinary.uploader.upload(file.file)
+    
+    url = 'https://www.nyckel.com/v1/functions/1havh70pkqgnqmes/invoke'
+    
+    data = {
+        "data": response['url']
+    }
+    
+    response_from_external_api = requests.post(url, json=data)
+    
+    label_name = response_from_external_api.json()['labelName']
+    
+    label_id = response_from_external_api.json()['labelId']
+    
+    label_confidence = response_from_external_api.json()['confidence']
+    
+    
+    
+        

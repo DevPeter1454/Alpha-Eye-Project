@@ -86,6 +86,7 @@ class Hospital(Base):
     state = Column(String, nullable=False)
     role = Column(String, nullable=False, default="hospital")
     created_at = Column(TIMESTAMP, server_default=text('NOW()'))
+    lga = Column(String, nullable=False)
     updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))    
     admin_email = Column(String, nullable=False)
     password = Column(String, nullable=False)
@@ -119,19 +120,15 @@ class Scan(Base):
     updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))
     
     
-# class ScanHistory(Base):
-#     __tablename__ = "scan_history"
+# class DoctorScan(Base):
+#     __tablename__ = "doctor_scans"
 #     id = Column(Integer, nullable=False, index=True, primary_key=True)
-#     label_name = Column(String, nullable=False)
+#     doctor_id = Column(String, ForeignKey("doctors.id"), nullable=False)
+#     scan_id = Column(String, ForeignKey("scans.scan_id"), nullable=False)
+#     created_at = Column(TIMESTAMP, server_default=text('NOW()'))
 #     label_id = Column(String, nullable=False)
+#     label_name = Column(String, nullable=False)
 #     label_confidence = Column(Integer, nullable=False)
 #     detected_conditions = Column(String, nullable=False)
-#     severity = Column(String, nullable=False)
-#     detailed_description = Column(String, nullable=False)
-#     title = Column(String, nullable=False)
-#     description = Column(String, nullable=False)
-#     recommendation = Column(String, nullable=False)
-#     special_id = Column(String, ForeignKey("users.special_id"), nullable=False)
-#     created_at = Column(TIMESTAMP, server_default=text('NOW()'))
-#     updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))
+#     severity = Column(String, nullable=False) 
     
