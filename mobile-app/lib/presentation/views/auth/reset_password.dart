@@ -95,7 +95,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                       'Set New Password',
                       fontSize: 24,
                       color: AppColors.sdn900,
-                      fontFamily: FontFamily.hovesBold,
+                      fontWeight: FontWeight.w600,
                     ),
                     const Spacing.tinyHeight(),
                     RichText(
@@ -107,7 +107,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                               text: widget.email,
                               style: const TextStyle(
                                 color: AppColors.sdn900,
-                                fontFamily: FontFamily.hovesSemiBold,
+                                fontWeight: FontWeight.w600,
                                 fontSize: 16,
                               ),
                             ),
@@ -115,7 +115,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                           style: const TextStyle(
                             fontSize: 16,
                             color: AppColors.sdn600,
-                            fontFamily: FontFamily.hovesRegular,
+                            fontWeight: FontWeight.w600,
                           )),
                       textAlign: TextAlign.center,
                     ),
@@ -132,8 +132,9 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                           height: 48,
                           width: 48,
                           textStyle: const TextStyle(
-                              color: AppColors.sdn900,
-                              fontFamily: FontFamily.hovesBold),
+                            color: AppColors.sdn900,
+                            fontWeight: FontWeight.w700,
+                          ),
                           decoration: BoxDecoration(
                             borderRadius: BorderRadius.circular(8),
                             border: Border.all(
@@ -236,7 +237,7 @@ class _ResetPasswordPageState extends State<ResetPasswordPage> {
                               color: AppColors.primary,
                               fontSize: 20,
                               textDecoration: TextDecoration.underline,
-                              fontFamily: FontFamily.hovesBold,
+                              fontWeight: FontWeight.w700,
                             ),
                           ),
                         ),

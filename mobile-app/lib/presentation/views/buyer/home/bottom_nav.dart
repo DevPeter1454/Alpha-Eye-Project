@@ -47,7 +47,7 @@ class BuyerHome extends HookWidget {
               label: 'Home',
             ),
             BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
+              icon: Icon(Icons.person_outline),
               label: 'Settings',
             ),
           ],
@@ -56,19 +56,3 @@ class BuyerHome extends HookWidget {
     );
   }
 }
-
-// class BuyerHome extends StatelessWidget {
-//   const BuyerHome({super.key});
-
-//   @override
-//   Widget build(BuildContext context) {
-//     return Scaffold(
-//       appBar: AppBar(
-//         title: AppText('Home'),
-//       ),
-//       body: Container(
-//         child: AppText('Home'),
-//       ),
-//     );
-//   }
-// }

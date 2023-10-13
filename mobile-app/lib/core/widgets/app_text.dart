@@ -1,5 +1,6 @@
 import 'package:auto_size_text/auto_size_text.dart';
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import '../cores.dart';
 
@@ -33,16 +34,17 @@ class AppText extends StatelessWidget {
   Widget build(BuildContext context) {
     return AutoSizeText(text,
         maxLines: maxLines,
-        style: TextStyle(
-          color: color,
-          fontFamily: fontFamily ?? FontFamily.hovesRegular,
-          fontWeight: fontWeight,
-          fontStyle: fontStyle,
-          fontSize: fontSize,
-          overflow: overflow,
-          letterSpacing: letterSpacing,
-          decoration: textDecoration,
-          height: height,
+        style: GoogleFonts.roboto(
+          textStyle: TextStyle(
+            color: color,
+            fontWeight: fontWeight,
+            fontStyle: fontStyle,
+            fontSize: fontSize,
+            overflow: overflow,
+            letterSpacing: letterSpacing,
+            decoration: textDecoration,
+            height: height,
+          ),
         ),
         textAlign: alignment);
     // return Text(text, maxLines: maxLine, style: TextStyle(color: color, fontWeight: fontWeight, fontStyle: fontStyle, fontSize: size, overflow: overflow), textAlign: alignment);

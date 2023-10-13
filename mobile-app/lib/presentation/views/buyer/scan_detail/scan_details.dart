@@ -1,10 +1,13 @@
+import 'package:alpha_eye/data/data.dart';
 import 'package:alpha_eye/presentation/views/buyer/recommendation/clinic_recommendation.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_hooks/flutter_hooks.dart';
 
 import '../../../../core/cores.dart';
 
-class ScanDetailView extends StatefulWidget {
-  const ScanDetailView({super.key});
+class ScanDetailView extends StatefulHookWidget {
+  final ScanResponse scanResponse;
+  const ScanDetailView(this.scanResponse, {super.key});
 
   @override
   State<ScanDetailView> createState() => _ScanDetailViewState();
@@ -31,7 +34,7 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                 fontWeight: FontWeight.w600,
                 letterSpacing: 0.18,
               ),
-              const AppRectangle(
+              AppRectangle(
                 color: AppColors.white,
                 width: double.infinity,
                 padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
@@ -48,11 +51,39 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                     ),
                     Spacing.height(8),
                     AppText(
-                      'Good',
+                      widget.scanResponse.scan?.labelName ?? '',
                       fontSize: 24,
                       color: AppColors.black,
                       fontWeight: FontWeight.w600,
                       letterSpacing: 0.18,
+                    ),
+                    Spacing.height(24),
+                    Stack(
+                      children: [
+                        LinearProgressIndicator(
+                          value: widget.scanResponse.scan!.labelConfidence!
+                                  .toDouble() /
+                              100,
+                          backgroundColor: AppColors.lightBlue,
+                          color: AppColors.primary,
+                          minHeight: 50,
+                          borderRadius: BorderRadius.circular(100),
+                        ),
+                        Positioned(
+                          top: 0,
+                          left: 30,
+                          //right: 0,
+                          bottom: 0,
+                          child: Center(
+                            child: AppText(
+                              '${widget.scanResponse.scan!.labelConfidence!}%',
+                              color: AppColors.white,
+                              fontSize: 20,
+                              fontWeight: FontWeight.w500,
+                            ),
+                          ),
+                        ),
+                      ],
                     ),
                     Spacing.height(72),
                     AppText(
@@ -72,7 +103,7 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                     ),
                     Spacing.height(12),
                     AppText(
-                      'Severity: Mild',
+                      'Severity: ${widget.scanResponse.scan?.severity}',
                       fontSize: 14,
                       color: AppColors.black,
                       fontWeight: FontWeight.w500,
@@ -133,7 +164,9 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                     ),
                     const Spacing.height(13),
                     //Bullet point
-                    bulletPoint(text: 'Continue with regular eye check-ups.'),
+                    bulletPoint(
+                        text:
+                            '${widget.scanResponse.detailedDescription?.recommendation}'),
                     bulletPoint(text: 'Consider UV protection when outdoors.'),
                     bulletPoint(text: 'Wear sunglasses that block UV light.'),
                     bulletPoint(

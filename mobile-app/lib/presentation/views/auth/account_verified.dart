@@ -60,29 +60,27 @@ class _AccountVerifySuccessPageState extends State<AccountVerifySuccessPage> {
                     'Your account has been verified successfully',
                     fontSize: 24,
                     color: AppColors.sdn900,
-                    fontFamily: FontFamily.hovesBold,
                     alignment: TextAlign.center,
                   ),
                   const Spacing.tinyHeight(),
                   RichText(
                     text: const TextSpan(
-                        text:
-                            'Lorem ipsum dolor sit amet consectetur. A nullam volutpat neque risus a suspendisse sed quis nec.',
-                        children: [
-                          TextSpan(
-                            text: '',
-                            style: TextStyle(
-                              color: AppColors.sdn900,
-                              fontFamily: FontFamily.hovesSemiBold,
-                              fontSize: 16,
-                            ),
+                      text:
+                          'Lorem ipsum dolor sit amet consectetur. A nullam volutpat neque risus a suspendisse sed quis nec.',
+                      children: [
+                        TextSpan(
+                          text: '',
+                          style: TextStyle(
+                            color: AppColors.sdn900,
+                            fontSize: 16,
                           ),
-                        ],
-                        style: TextStyle(
-                          fontSize: 16,
-                          color: AppColors.sdn600,
-                          fontFamily: FontFamily.hovesRegular,
-                        )),
+                        ),
+                      ],
+                      style: TextStyle(
+                        fontSize: 16,
+                        color: AppColors.sdn600,
+                      ),
+                    ),
                     textAlign: TextAlign.center,
                   ),
                   const Spacing.height(21),

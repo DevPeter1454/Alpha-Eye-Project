@@ -21,7 +21,6 @@ class OrDivider extends StatelessWidget {
         const Spacing.mediumWidth(),
         const AppText(
           'or sign up with',
-          fontFamily: FontFamily.hovesMedium,
           color: Color(0xFF979797),
           fontSize: 16,
         ),

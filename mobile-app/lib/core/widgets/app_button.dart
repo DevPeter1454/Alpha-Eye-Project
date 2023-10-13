@@ -70,7 +70,6 @@ class AppButton extends StatelessWidget {
                     title ?? '',
                     fontSize: 18,
                     color: AppColors.white,
-                    fontFamily: FontFamily.hovesSemiBold,
                   ),
                   if (loading ?? false)
                     Container(
