@@ -41,6 +41,17 @@ def dict_to_user(user, data):
         setattr(user, key, value)
     return user
 
+def doctor_to_dict(doctor):
+    return {
+        column.key: getattr(doctor, column.key)
+        for column in doctor.__table__.columns
+    }
+    
+def dict_to_doctor(doctor, data):
+    for key, value in data.items():
+        setattr(doctor, key, value)
+    return doctor
+
 def generate_scan_id():
     random_value = str(randint(0, 999999)).zfill(6)
     scan_id = f"Scan {random_value}"

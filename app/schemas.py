@@ -67,7 +67,7 @@ class DoctorOut(BaseModel):
 
 class Doctor(DoctorBase):
     id: int
-    hospital_id: str
+    # hospital_id: str
     created_at: datetime
     updated_at: datetime
     
@@ -183,6 +183,10 @@ class TokenUser(BaseModel):
     token_type:str = "bearer"
     user: UserBase
     
+class TokenDoctors(BaseModel):
+    access_token:str
+    token_type:str = "bearer"
+    doctor: Doctor
     
 # class Scan(BaseModel):
 #     special_id: str

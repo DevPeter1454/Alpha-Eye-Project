@@ -27,7 +27,7 @@ async def login_user(user_credentials: OAuth2PasswordRequestForm = Depends(), db
     
     # return token_user_data
 
-@router.post("/doctor/login", response_model=schemas.Token, status_code=status.HTTP_200_OK)
+@router.post("/doctor/login",  status_code=status.HTTP_200_OK)
 def login_doctor(doctor_credentials: OAuth2PasswordRequestForm = Depends(), db:Session = Depends(database.get_db)):
     doctor = db.query(models.Doctor).filter(models.Doctor.email == doctor_credentials.username).first()
     if doctor is None:
@@ -35,7 +35,12 @@ def login_doctor(doctor_credentials: OAuth2PasswordRequestForm = Depends(), db:S
     if not utils.verify(doctor_credentials.password, doctor.password):
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Incorrect Password")
     access_token = oauth2.create_access_token(data={"id":doctor.id, "role":"doctor"})
-    return {"access_token":access_token, "token_type":"bearer"}
+    
+    doctor_to_dict = utils.doctor_to_dict(doctor)
+    
+    token_doctor_data = schemas.TokenDoctors(token_type="bearer", access_token=access_token, doctor =doctor_to_dict)
+    
+    return token_doctor_data
 
 @router.post("/hospital/login", response_model=schemas.Token, status_code=status.HTTP_200_OK)
 def login_hospital(hospital_credentials:OAuth2PasswordRequestForm = Depends(), db:Session = Depends(database.get_db)):
