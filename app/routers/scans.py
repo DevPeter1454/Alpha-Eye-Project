@@ -262,7 +262,7 @@ async def upload_scan_by_doctor(file: UploadFile,patient_id:str, current_user = 
     if current_user.role == "patient" or current_user.role == "user":
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
     
-    patient = db.query(models.Patient).filter(models.Patient.patient_id == patient_id).first()
+    patient = db.query(models.Patient).filter(models.Patient.special_id == patient_id).first()
     
     if patient is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Patient not found")
