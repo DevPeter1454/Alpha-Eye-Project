@@ -86,7 +86,6 @@ class Hospital(Base):
     state = Column(String, nullable=False)
     role = Column(String, nullable=False, default="hospital")
     created_at = Column(TIMESTAMP, server_default=text('NOW()'))
-    lga = Column(String, nullable=False)
     updated_at = Column(TIMESTAMP, server_default=text('NOW()'), onupdate=text('NOW()'))    
     admin_email = Column(String, nullable=False)
     password = Column(String, nullable=False)
