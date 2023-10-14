@@ -1,3 +1,4 @@
+import 'package:alpha_eye/data/models/responses/hospital_response.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:alpha_eye/data/repos/scan_repo.dart';
@@ -32,6 +33,21 @@ class ScanBloc extends Bloc<ScanEvent, ScanState> {
         if (res.success) {
           emit(
             GetScanHistorySuccess(res.data!),
+          );
+        } else {
+          emit(ScanError(res.message));
+        }
+      } catch (e) {
+        emit(ScanError(e.toString()));
+      }
+    });
+    on<GetHospitalByStateEvent>((event, emit) async {
+      emit(ScanLoading());
+      try {
+        final res = await _scanRepo.getHospitalByState(state: event.state);
+        if (res.success) {
+          emit(
+            GetHospitalByStateSuccess(res.data!),
           );
         } else {
           emit(ScanError(res.message));

@@ -27,16 +27,19 @@ class _RecentScanViewState extends State<RecentScanView> {
   @override
   Widget build(BuildContext context) {
     final scans = useState(<ScanResponse>[]);
+    final loading = useState(true);
     return BlocConsumer(
       bloc: scanBloc,
       listener: (context, state) {
         if (state is ScanError) {
           log(state.error);
           snackBars.error(message: state.error);
+          loading.value = false;
         }
         if (state is GetScanHistorySuccess) {
           scans.value = state.scanHistory;
           log(scans.value[0].scan!.scanId.toString());
+          loading.value = false;
         }
       },
       builder: (context, state) {
@@ -57,28 +60,49 @@ class _RecentScanViewState extends State<RecentScanView> {
                   fontWeight: FontWeight.w500,
                 ),
                 const Spacing.height(16),
-                Expanded(
-                  child: ListView.separated(
-                    itemBuilder: (context, index) {
-                      return GestureDetector(
-                        onTap: () {
-                          navigationService
-                              .push(ScanDetailView(scans.value[index]));
-                        },
-                        child: ScanCard(
-                          title: scans.value[index].scan?.scanId ?? '',
-                          date:
-                              '${scans.value[index].scan?.createdAt!.day}/${scans.value[index].scan?.createdAt!.month}/${scans.value[index].scan?.createdAt!.year}',
+                Builder(
+                  builder: (context) {
+                    if (loading.value) {
+                      return const Center(
+                        child: CircularProgressIndicator(),
+                      );
+                    }
+                    if (scans.value.isEmpty) {
+                      return const Center(
+                        child: AppText(
+                          'No scan history',
+                          fontSize: 18,
+                          color: AppColors.black,
+                          fontWeight: FontWeight.w500,
                         ),
                       );
-                    },
-                    separatorBuilder: (context, index) {
-                      return const Spacing.height(16);
-                    },
-                    itemCount: scans.value.length,
-                    shrinkWrap: true,
-                  ),
+                    }
+                    return const SizedBox();
+                  },
                 ),
+                if (loading.value == false && scans.value.isNotEmpty)
+                  Expanded(
+                    child: ListView.separated(
+                      itemBuilder: (context, index) {
+                        return GestureDetector(
+                          onTap: () {
+                            navigationService
+                                .push(ScanDetailView(scans.value[index]));
+                          },
+                          child: ScanCard(
+                            title: scans.value[index].scan?.scanId ?? '',
+                            date:
+                                '${scans.value[index].scan?.createdAt!.day}/${scans.value[index].scan?.createdAt!.month}/${scans.value[index].scan?.createdAt!.year}',
+                          ),
+                        );
+                      },
+                      separatorBuilder: (context, index) {
+                        return const Spacing.height(16);
+                      },
+                      itemCount: scans.value.length,
+                      shrinkWrap: true,
+                    ),
+                  ),
               ],
             ),
           ),

@@ -3,7 +3,7 @@
     <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:requestLegacyExternalStorage="true"
-        android:label="alpha_eye"
+        android:label="Alpha Eye"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

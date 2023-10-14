@@ -1,5 +1,6 @@
 import 'dart:developer';
 
+import 'package:alpha_eye/data/models/responses/hospital_response.dart';
 import 'package:dio/dio.dart';
 import 'package:alpha_eye/data/datasources/remote/base/api_failure.dart';
 import 'package:alpha_eye/data/datasources/remote/base/api_response.dart';
@@ -42,6 +43,22 @@ class ScanApi {
       return ApiResponse.fromJson(res)
         ..data = (res['scans'] as List)
             .map((e) => ScanResponse.fromJson(e))
+            .toList();
+    } on ApiFailure catch (e) {
+      return ApiResponse(success: false, message: e.message);
+    }
+  }
+
+  Future<ApiResponse<List<HospitalResponse>?>> getHospitalByState(
+      {required String state}) async {
+    try {
+      final res = await _apiService.get(
+        "/hospitals/state/$state",
+      );
+      print(res.runtimeType);
+      return ApiResponse.fromJson(res)
+        ..data = (res["hospitals"] as List)
+            .map((e) => HospitalResponse.fromJson(e))
             .toList();
     } on ApiFailure catch (e) {
       return ApiResponse(success: false, message: e.message);

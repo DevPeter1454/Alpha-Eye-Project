@@ -12,6 +12,11 @@ class GetScanHistoryEvent extends ScanEvent {
   GetScanHistoryEvent();
 }
 
+class GetHospitalByStateEvent extends ScanEvent {
+  final String state;
+  GetHospitalByStateEvent({required this.state});
+}
+
 // class RegisterEvent extends ScanEvent {
 //   final RegisterParam param;
 //   RegisterEvent({required this.param});

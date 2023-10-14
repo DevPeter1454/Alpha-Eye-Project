@@ -37,19 +37,20 @@ class _ScanDetailViewState extends State<ScanDetailView> {
               AppRectangle(
                 color: AppColors.white,
                 width: double.infinity,
-                padding: EdgeInsets.symmetric(vertical: 24.0, horizontal: 16.0),
+                padding: const EdgeInsets.symmetric(
+                    vertical: 24.0, horizontal: 16.0),
                 radius: 12,
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    AppText(
+                    const AppText(
                       'Overall Eye Health Status:',
                       fontSize: 14,
                       color: AppColors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.18,
                     ),
-                    Spacing.height(8),
+                    const Spacing.height(8),
                     AppText(
                       widget.scanResponse.scan?.labelName ?? '',
                       fontSize: 24,
@@ -57,7 +58,7 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                       fontWeight: FontWeight.w600,
                       letterSpacing: 0.18,
                     ),
-                    Spacing.height(24),
+                    const Spacing.height(24),
                     Stack(
                       children: [
                         LinearProgressIndicator(
@@ -85,23 +86,23 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                         ),
                       ],
                     ),
-                    Spacing.height(72),
-                    AppText(
+                    const Spacing.height(72),
+                    const AppText(
                       'Detected Conditions:',
                       fontSize: 14,
                       color: AppColors.black,
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.18,
                     ),
-                    Spacing.height(8),
+                    const Spacing.height(8),
                     AppText(
-                      'Cataracts Detected',
+                      widget.scanResponse.scan!.labelName!,
                       fontSize: 18,
                       color: AppColors.primary,
                       fontWeight: FontWeight.w400,
                       letterSpacing: 0.18,
                     ),
-                    Spacing.height(12),
+                    const Spacing.height(12),
                     AppText(
                       'Severity: ${widget.scanResponse.scan?.severity}',
                       fontSize: 14,
@@ -109,14 +110,7 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                       fontWeight: FontWeight.w500,
                       letterSpacing: 0.18,
                     ),
-                    Spacing.height(8),
-                    AppText(
-                      'Progression: Stable',
-                      fontSize: 14,
-                      color: AppColors.black,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.18,
-                    ),
+                    const Spacing.height(8),
                   ],
                 ),
               ),
@@ -138,23 +132,31 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const AppText(
-                      'What is Cataract?',
-                      fontSize: 16,
-                      color: AppColors.primary,
-                      fontWeight: FontWeight.w600,
-                      letterSpacing: 0.18,
+                    Visibility(
+                      visible: widget.scanResponse.scan!.labelName != "Normal",
+                      child: const Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          AppText(
+                            'What is Cataract?',
+                            fontSize: 16,
+                            color: AppColors.primary,
+                            fontWeight: FontWeight.w600,
+                            letterSpacing: 0.18,
+                          ),
+                          Spacing.height(13),
+                          AppText(
+                            "Cataracts are cloudy areas in the lens of the eye. Your scan detected a mild cataract. Cataracts are common with age and usually progress slowly. It's essential to monitor them and seek medical advice if your vision is affected.",
+                            fontSize: 14,
+                            color: AppColors.black,
+                            fontWeight: FontWeight.w400,
+                            letterSpacing: 0.18,
+                            height: 1.5,
+                          ),
+                          Spacing.height(16),
+                        ],
+                      ),
                     ),
-                    const Spacing.height(13),
-                    const AppText(
-                      "Cataracts are cloudy areas in the lens of the eye. Your scan detected a mild cataract. Cataracts are common with age and usually progress slowly. It's essential to monitor them and seek medical advice if your vision is affected.",
-                      fontSize: 14,
-                      color: AppColors.black,
-                      fontWeight: FontWeight.w400,
-                      letterSpacing: 0.18,
-                      height: 1.5,
-                    ),
-                    const Spacing.height(16),
                     const AppText(
                       'Recomendations',
                       fontSize: 16,
@@ -163,15 +165,23 @@ class _ScanDetailViewState extends State<ScanDetailView> {
                       letterSpacing: 0.18,
                     ),
                     const Spacing.height(13),
-                    //Bullet point
-                    bulletPoint(
-                        text:
-                            '${widget.scanResponse.detailedDescription?.recommendation}'),
-                    bulletPoint(text: 'Consider UV protection when outdoors.'),
-                    bulletPoint(text: 'Wear sunglasses that block UV light.'),
-                    bulletPoint(
-                        text:
-                            'Consult an eye specialist for further evaluation if needed.'),
+                    AppText(
+                      '${widget.scanResponse.detailedDescription?.recommendation}',
+                      fontSize: 14,
+                      color: AppColors.black,
+                      fontWeight: FontWeight.w400,
+                      letterSpacing: 0.18,
+                      height: 1.5,
+                    ),
+                    // //Bullet point
+                    // bulletPoint(
+                    //     text:
+                    //         '${widget.scanResponse.detailedDescription?.recommendation}'),
+                    // bulletPoint(text: 'Consider UV protection when outdoors.'),
+                    // bulletPoint(text: 'Wear sunglasses that block UV light.'),
+                    // bulletPoint(
+                    //     text:
+                    //         'Consult an eye specialist for further evaluation if needed.'),
                   ],
                 ),
               ),

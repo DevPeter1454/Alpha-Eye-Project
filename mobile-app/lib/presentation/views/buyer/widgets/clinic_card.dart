@@ -1,8 +1,10 @@
 import 'package:alpha_eye/core/cores.dart';
+import 'package:alpha_eye/data/models/responses/hospital_response.dart';
 import 'package:flutter/material.dart';
 
 class ClinicCard extends StatelessWidget {
-  const ClinicCard({super.key});
+  final HospitalResponse hospitalResponse;
+  const ClinicCard({super.key, required this.hospitalResponse});
 
   @override
   Widget build(BuildContext context) {
@@ -14,24 +16,30 @@ class ClinicCard extends StatelessWidget {
         children: [
           Row(
             children: [
-              Image.asset(
-                AppAssets.uiLogoPng,
-                height: 56,
-                width: 56,
-              ),
+              hospitalResponse.logo != null
+                  ? Image.network(
+                      hospitalResponse.logo!,
+                      height: 56,
+                      width: 56,
+                    )
+                  : Image.asset(
+                      AppAssets.uiLogoPng,
+                      height: 56,
+                      width: 56,
+                    ),
               const Spacing.width(8),
-              const Column(
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   AppText(
-                    'UI Clinic',
+                    hospitalResponse.hospitalName!,
                     fontSize: 16,
                     color: AppColors.black,
                     fontWeight: FontWeight.w500,
                     letterSpacing: 0.18,
                   ),
-                  Spacing.height(4),
-                  AppText(
+                  const Spacing.height(4),
+                  const AppText(
                     'Federal Clinic',
                     fontSize: 14,
                     color: AppColors.black,
@@ -48,16 +56,16 @@ class ClinicCard extends StatelessWidget {
             thickness: 1,
           ),
           const Spacing.height(8),
-          const Row(
+          Row(
             children: [
-              Icon(
+              const Icon(
                 Icons.location_on,
                 color: AppColors.greyText,
                 size: 16,
               ),
-              Spacing.width(8),
+              const Spacing.width(8),
               AppText(
-                '254,  Opposite college gate, Ibadan',
+                hospitalResponse.address!,
                 fontSize: 14,
                 color: AppColors.greyText,
                 fontWeight: FontWeight.w400,
@@ -104,7 +112,8 @@ class ClinicCard extends StatelessWidget {
               ),
               AppButton(
                 //width: 150,
-                padding: EdgeInsets.symmetric(horizontal: 12.0, vertical: 2.0),
+                padding:
+                    const EdgeInsets.symmetric(horizontal: 12.0, vertical: 2.0),
                 onPressed: () {},
                 color: AppColors.primary,
                 radius: 100,

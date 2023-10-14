@@ -48,7 +48,7 @@ class BuyerHome extends HookWidget {
             ),
             BottomNavigationBarItem(
               icon: Icon(Icons.person_outline),
-              label: 'Settings',
+              label: 'Profile',
             ),
           ],
         ),

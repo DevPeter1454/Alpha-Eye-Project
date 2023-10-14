@@ -30,3 +30,8 @@ class GetScanHistorySuccess extends ScanState {
   final List<ScanResponse> scanHistory;
   GetScanHistorySuccess(this.scanHistory);
 }
+
+class GetHospitalByStateSuccess extends ScanState {
+  final List<HospitalResponse> hospitals;
+  GetHospitalByStateSuccess(this.hospitals);
+}
