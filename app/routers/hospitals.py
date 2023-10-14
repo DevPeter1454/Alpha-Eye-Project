@@ -60,8 +60,26 @@ def get_hospitals_by_city(city:str, db: Session = Depends(get_db)):
     hospitals = db.query(models.Hospital).filter(func.lower(models.Hospital.city) == city.lower()).all()
     return hospitals
 
-@router.get("/state/{state}", status_code= status.HTTP_200_OK, response_model=List[schemas.PublicHospital])
+@router.get("/state/{state}", status_code= status.HTTP_200_OK)
 def get_hospitals_by_state(state:str, db: Session = Depends(get_db)):
     print('here')
     hospitals = db.query(models.Hospital).filter(func.lower(models.Hospital.state) == state.lower()).all()
-    return hospitals
+    
+    all_hospitals= []
+    
+    for hospital in hospitals:
+        all_hospitals.append({
+            
+                "hospital_name": hospital.hospital_name,
+                "address": hospital.address,
+                "city": hospital.city,
+                "state": hospital.state,
+                "hospital_id": hospital.hospital_id,
+                "logo": hospital.logo    
+        })
+    
+    # print(all_hospitals)
+    
+    return {
+        "hospitals": all_hospitals
+    }
