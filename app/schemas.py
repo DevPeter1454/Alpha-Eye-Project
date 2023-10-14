@@ -153,6 +153,7 @@ class PublicHospital(BaseModel):
     city: str
     state: str
     hospital_id: str
+    logo: str
     
     class Config:
         from_attributes = True
