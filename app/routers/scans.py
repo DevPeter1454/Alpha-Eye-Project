@@ -257,10 +257,15 @@ def get_scan_by_scan_id(scan_id:str, current_user =Depends(oauth2.get_current_us
     
 
 
-@router.post("/doctor/upload",status_code=status.HTTP_201_CREATED)
-async def upload_scan_by_doctor(file: UploadFile, current_user = Depends(oauth2.get_current_user), db:Session = Depends(get_db)):
+@router.post("/doctor/upload/{patient_id}",status_code=status.HTTP_201_CREATED)
+async def upload_scan_by_doctor(file: UploadFile,patient_id:str, current_user = Depends(oauth2.get_current_user), db:Session = Depends(get_db)):
     if current_user.role == "patient" or current_user.role == "user":
         raise HTTPException(status_code=status.HTTP_403_FORBIDDEN, detail="Not authorized")
+    
+    patient = db.query(models.Patient).filter(models.Patient.patient_id == patient_id).first()
+    
+    if patient is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="Patient not found")
     
     response = cloudinary.uploader.upload(file.file)
     
@@ -277,6 +282,19 @@ async def upload_scan_by_doctor(file: UploadFile, current_user = Depends(oauth2.
     label_id = response_from_external_api.json()['labelId']
     
     label_confidence = response_from_external_api.json()['confidence']
+    
+    return {
+        "scan_details":{
+            "condition": label_name,
+            "confidence": label_confidence * 100,
+            "label_id": label_id,
+        },
+        "patient_id": utils.patient_to_dict(patient)
+    }
+    
+    
+    
+    
     
     
     
